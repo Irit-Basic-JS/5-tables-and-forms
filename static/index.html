@@ -9,98 +9,82 @@
 <main>
     <h1>Найди себе друга!</h1>
     <form action="/pets/orders" method="POST">
-        <label>
-            Логин
-            <input type="text" name="login" placeholder="Введите ваш логин" value="Sasha" required>
-        </label>
+        <fieldset class="data-user">
+            <legend>Ваши данные</legend>
+            <label>
+                Логин
+                <input type="text" name="login" placeholder="Введите ваш логин" value="Sasha" required>
+            </label>
 
-        <label>
-            Ваше имя
-            <input type="text" name="name" placeholder="Введите имя" value="Sasha" required>
-        </label>
-        <label>
-            <input type="date" name="dateOfBirth" value="09.09.2001" required>
-        </label>
-        <br>
+            <label>
+                Ваше имя
+                <input type="text" name="name" placeholder="Введите имя" value="Sasha" required>
+            </label>
 
+            <label>
+                <input type="date" name="dateOfBirth" value="2001-09-09" required>
+            </label>
 
-        <label>
-            Введите номер телефона
-            <input type="tel" name="phone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="8-800-555-3535"
-                   value="8-800-555-3535" required>
-        </label>>
-        <label>
-            Email
-            <input type="email" name="email" value="Sasha@yandex.ru" required>
-        </label>
+            <label>
+                Введите номер телефона
+                <input type="tel" name="phone"
+                       placeholder="+7 (919) 342-39-98"
+                       required>
+            </label>
 
-        <label>
-            Пароль
-            <input type="password" name="password" value="Parol" required>
-        </label>
-
-        <label>
-            <input type="radio" name="gender" value="boy"> Мужчина
-        </label>
-        <label>
-            <input type="radio" name="gender" value="girl"> Женщина
-        </label>
-        <label>
-            <input type="radio" name="gender" value="none" checked> Не решил еще
-        </label>
-        <br>
-
-        <label>
-            Какой цвет ваших глаз?
-            <input type="radio" name="eyeColor" value="#A52A2A" checked> Коричневый
-        </label>
-        <label>
-            <input type="radio" name="eyeColor" value="#008000"> Зелёный
-        </label>
-        <label>
-            <input type="radio" name="eyeColor" value="#0000FF"> Голубой
-        </label>
-        <label>
-            <input type="radio" name="eyeColor" value=""> Другое
-        </label>
-        <br>
+            <label>
+                Email
+                <input type="email" name="email" value="Sasha@yandex.ru" required>
+            </label>
+        </fieldset>
+        <fieldset class="data-pet">
+            <legend>Данные питомца</legend>
+            <label>Пол питомца</label>
+            <label>
+                <input type="radio" name="gender" value="boy" checked> Мужской пол
+                <input type="radio" name="gender" value="girl"> Женский пол
+                <input type="radio" name="gender" value="none" checked>Не определился
+            </label>
 
 
-        <label>
-            Ваше любимое животное
-            <select name="petType">
-                <option value="dog" selected>Собака</option>
-                <option value="cat">Кот</option>
-                <option value="donkey">Осёл</option>
-            </select>
-        </label>
-        <br>
+            <label>
+                Какой цвет глаз?
+                <input type="color" name="eyeColor" required>
+            </label>
 
-        <label>
-            Длина хвоста? (КАВО???)
-            <input type="number" name="tailLength" value="13" min="0" max="100" step="1" required>
-        </label>
-        <br>
+            <label>
+                Ваше любимое животное
+                <select name="petType">
+                    <option value="dog" selected>Собака</option>
+                    <option value="cat">Кот</option>
+                    <option value="cherepaha">Черепаха</option>
+                    <option value="muravey">Муравей</option>
+                    <option value="doplhin">Дельфин</option>
+                    <option value="shlepa">Шлёпа</option>
+                    <option value="js">JS</option>
+                </select>
+            </label>
 
-        <label>
-            Откуда вы о нас узнали
-            <textarea name="learn-info">Черт его знает</textarea>
-        </label>
-        <br>
+            <label>
+                Длина хвоста? <input type="number" name="tailLength" value="13" min="7" max="120" step="1" required>
+            </label>
 
-        <label>
-            <input type="checkbox" name="rules" checked value="true"> Я согласен с тем, что Макар красава
-        </label>
-        <br>
 
-        <label>
-            <input type="submit" name="submit" value="Зарегистрироваться">
-        </label>
-        <label>
-            Сброс
-            <input type="reset" name="reset">
-        </label>
+            <label>
+                <input type="checkbox" name="rules" checked value="true"> Я согласен с правилами, а также с тем, что
+                Макар красава
+            </label>
+        </fieldset>
+        <fieldset>
+            <label>
+                <input type="submit" name="submit" value="Отправить форму">
+            </label>
+            <label>
+                <input type="reset" name="reset" value="Сбросить данные">
+            </label>
+        </fieldset>
     </form>
+    <script src="validation.js"></script>
 </main>
 </body>
 </html>
