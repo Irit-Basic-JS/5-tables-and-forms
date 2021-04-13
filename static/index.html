@@ -8,9 +8,65 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
+    <form action="/pets/orders" method="POST">
+        <label>
+            Животное, которое вы хотите
+            <select name="petType">
+                <option value="dog">Собака</option>
+                <option value="cat">Кот</option>
+                <option value="tiger">Тигра</option>
+            </select>
+        </label>
 
-    <!--Форму размещай тут-->
+        <label>
+            Цвет глаз
+            <input type="color" name="eyeColor">
+        </label>
 
+        <label>
+            Длина хвоста
+            <input type="number" name="tailLength">
+        </label>
+
+        <label>
+            <input type="radio" name="gender" value="boy"> Мальчик
+        </label>
+        <label>
+            <input type="radio" name="gender" value="girl"> Девочка
+        </label>
+        <label>
+            <input type="radio" name="gender" value="none"> Не решил еще
+        </label>
+
+        <label>
+            Ваше имя
+            <input type="text" name="name" placeholder="Введите имя">
+        </label>
+
+        <label>
+            Номер телефона
+            <input type="tel" name="phone">
+        </label>
+
+        <label>
+            Email
+            <input type="email" name="email">
+        </label>
+
+        <label>
+            Дата рождения
+            <input type="date" name="dateOfBirth">
+        </label>
+
+        <label>
+            <input type="checkbox" name="rules" value="true" checked> Я согласен с условиями и готов продать
+            душу Макару.
+        </label>
+
+        <label>
+            <input type="submit" name="submit" value="Зарегистрироваться">
+        </label>
+    </form>
 </main>
 </body>
 </html>
