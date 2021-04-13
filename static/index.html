@@ -9,66 +9,73 @@
 <main>
     <h1>Найди себе друга!</h1>
     <form action="/pets/orders" method="POST">
-        <label>
-            Животное, которое вы хотите
-            <select name="petType">
-                <option value="dog">Собака</option>
-                <option value="cat">Кот</option>
-                <option value="tiger">Тигра</option>
-            </select>
-        </label>
-
-        <label>
-            Цвет глаз
-            <input type="color" name="eyeColor">
-        </label>
-
-        <label>
-            Длина хвоста
-            <input type="number" name="tailLength">
-        </label>
-        <label>
-            Пол животного
+        <fieldset>
+            <legend>Информация о питомце</legend>
             <label>
-                <input type="radio" name="gender" value="boy"> Мальчик
+                Животное, которое вы хотите
+                <select name="petType">
+                    <option value="dog">Собака</option>
+                    <option value="cat">Кот</option>
+                    <option value="tiger">Тигра</option>
+                </select>
+            </label>
+
+            <label>
+                Цвет глаз
+                <input type="color" name="eyeColor">
+            </label>
+
+            <label>
+                Длина хвоста
+                <input type="number" name="tailLength" min="7" max="120" value="7" required>
             </label>
             <label>
-                <input type="radio" name="gender" value="girl"> Девочка
+                Пол животного
+                <label>
+                    <input type="radio" name="gender" value="boy"> Мальчик
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="girl"> Девочка
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="none" checked> Не решил еще
+                </label>
             </label>
+        </fieldset>
+        <fieldset>
+            <legend>Информация о себе</legend>
             <label>
-                <input type="radio" name="gender" value="none"> Не решил еще
+                Ваше имя
+                <input type="text" name="name" placeholder="Введите имя" minlength="3" maxlength="50" required>
             </label>
-        </label>
-        <label>
-            Ваше имя
-            <input type="text" name="name" placeholder="Введите имя">
-        </label>
 
-        <label>
-            Номер телефона
-            <input type="tel" name="phone" placeholder="+7(900)-000-00-00" pattern="+7(9[0-9]{2})-[0-9]{3}-[0-9]{2}-[0-9]{2}">
-        </label>
+            <label>
+                Номер телефона
+                <input type="tel" name="phone" class="phone" id="phone" placeholder="+7 (900) 000-00-00" required>
+            </label>
 
-        <label>
-            Email
-            <input type="email" name="email" placeholder="example@mail.com">
-        </label>
+            <label>
+                Email
+                <input type="email" name="email" placeholder="example@mail.com" required>
+            </label>
 
-        <label>
-            Дата рождения
-            <input type="date" name="dateOfBirth">
-        </label>
+            <label>
+                Дата рождения
+                <input type="date" name="dateOfBirth" required>
+            </label>
 
-        <label>
-            <input type="checkbox" name="rules" value="true" checked> Я согласен с условиями и готов продать
-            душу Макару.
-        </label>
-
+            <label>
+                <input type="checkbox" name="rules" value="true" required> Я согласен с условиями и готов принять к себе
+                пушистого зверька.
+            </label>
+        </fieldset>
         <label class="buttons">
-            <input type="submit" name="submit" value="Зарегистрироваться">
+            <input type="submit" name="submit" value="Отправить" disabled>
             <input type="reset" name="reset" value="Сбросить">
         </label>
     </form>
 </main>
+<script src="validate.js"></script>
+<script src="submitForm.js"></script>
 </body>
 </html>
