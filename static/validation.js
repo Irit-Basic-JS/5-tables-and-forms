@@ -3,9 +3,9 @@ const email = document.querySelector(".email");
 const submit = document.querySelector(".submit");
 
 function isEmailValid(email) {
-	// return email.includes("@") && email.includes(".");
-    const regex = /[.]@[.].[.]]/;
-	return email.match(regex);
+	return email.includes("@") && email.includes(".");
+    // const regex = /[.]@[.].[.]]/;
+	// return email.match(regex);
 }
 
 function isNumberValid(number) {
@@ -14,8 +14,13 @@ function isNumberValid(number) {
 }
 
 submit.addEventListener("click", function (ev) {
-	if (!isEmailValid(email.value) || !isNumberValid(phone.value)) {
-		alert("Incorrect input");
+	if (!isEmailValid(email.value)) {
+		alert("Incorrect email");
+		ev.preventDefault();
+	}
+
+	if (!isNumberValid(phone.value)) {
+		alert("Incorrect number");
 		ev.preventDefault();
 	}
 });
