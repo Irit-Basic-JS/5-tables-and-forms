@@ -6,11 +6,60 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<main>
-    <h1>Найди себе друга!</h1>
-
-    <!--Форму размещай тут-->
-
-</main>
-</body>
-</html>
+    <main>
+        <h1>Найди себе друга!</h1>
+        <form class="form" method="post" action="/pets/orders">
+            <fieldset>
+                <legend>Информация о животном</legend>
+                <label>Выберите тип животного:
+                    <select class="select" name="petType">
+                        <option value="cat">Cat</option>
+                        <option value="dog">Dog</option>
+                        <option value="tiger">Human</option>
+                        <option value="cat">Floppa</option>
+                        <option value="cat">Bingus</option>
+                        <option value="dog">Chungus</option>
+                        <option value="tiger">Monke</option>
+                    </select>
+                </label><br>
+                <label>Выберите пол животного:
+                    <input type="radio" name="gender" value="boy" checked>Мужской
+                    <input type="radio" name="gender" value="girl">Женский
+                    <input type="radio" name="gender" value="other">Запись к психиатру
+                </label><br>
+                <label>Выберите цвет глаз:
+                    <input class="color" type="color" name="eyeColor" value="#ffffff" required>
+                </label><br>
+                <label>Введите длину хвоста животного:
+                    <input class="number" type="number" name="tailLength" min="7" max="120" value="7" required>
+                </label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Информация о Себе</legend>
+                <label>Введите Ваше имя: 
+                    <input class="text" name="name" type="text" minlength="3" maxlength="50" value="%username%" required>
+                </label><br>
+                <label>Введите дату рождения:
+                    <input class="date" type="date" name="dateOfBirth" value="2000-01-01" required>
+                </label><br>
+                <label>Введите адрес электронной почты:
+                    <input class="email" type="email" name="email" value="mocker@gmail.com" required>
+                </label><br>
+                <label>Введите номер телефона:
+                    <input class="phone" type="tel" name="phone" value="89827289202" required>
+                </label><br>
+                <label class="checkboxLabel">ПУТИН Владимир Владимирович
+                    <input class="checkbox" type="checkbox" name="rules" value="true" required>
+                    <span></span>
+                </label><br>
+                <label class="buttons">
+                    <input class="reset" type="reset" name="reset">
+                    <input class="submit" type="submit"><br>
+                </label>
+                
+            </fieldset>
+        </form>
+    </main>
+    <script src="validation.js"></script>
+    </body>
+    </html>
