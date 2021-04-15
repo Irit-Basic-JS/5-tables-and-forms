@@ -8,45 +8,53 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
-    <form method="post" action="/pets/orders">
-        <label>Выберите тип животного
-            <select name="petType">
-                <option value="dog">Dog</option>
-                <option value="cat">Cat</option>
-                <option value="snake">Snake</option>
-            </select>
-        </label><br>
-        <label>Выберите пол существа
-            <select name="gender">
-                <option value="boy">Male</option>
-                <option value="girl">Female</option>
-                <option value="none">I don't know</option>
-            </select>
-        </label><br>
-        <label>Выберите цвет глаз
-            <input type="color" name="eyeColor" value="#1234ff" required>
-        </label><br>
-        <label>Введите длину хвоста животного
-            <input type="number" name="tailLength" min="7" max="120" value="15" required>
-        </label><br>
-        <label>Введите имя питомца
-            <input name="name" type="text" minlength="3" maxlength="50" value="noname" required>
-        </label><br>
-        <label>Ввкдите дату рождения
-            <input type="date" name="dateOfBirth" value="2010.10.10" required>
-        </label><br>
-        <label>Введите email
-            <input type="email" name="email" value="chusoveg17@gmail.com" required>
-        </label><br>
-        <label>Введите номер телефона
-            <input type="tel" name="phone" value="88005553535" required>
-        </label><br>
-        <label>Не понял
-            <input type="checkbox" name="rules" value="true" checked>
-        </label><br>
-        <input type="submit"><br>
+    <form class="form" method="post" action="/pets/orders">
+        <fieldset>
+            <legend>Информация о животном</legend>
+            <label>Выберите тип животного:
+                <select class="select" name="petType">
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="snake">Snake</option>
+                </select>
+            </label><br>
+            <label>Выберите пол животного:
+                <input type="radio" name="gender" value="boy">Male
+                <input type="radio" name="gender" value="girl">Female
+                <input type="radio" name="gender" value="none" checked>I don't know
+            </label><br>
+            <label>Выберите цвет глаз:
+                <input class="color" type="color" name="eyeColor" value="#1234ff" required>
+            </label><br>
+            <label>Введите длину хвоста животного:
+                <input class="number" type="number" name="tailLength" min="7" max="120" value="15" required>
+            </label><br>
+        </fieldset>
+        <fieldset>
+            <legend>Информация о Себе</legend>
+            <label>Введите Ваше имя: 
+                <input class="text" name="name" type="text" minlength="3" maxlength="50" value="noname" required>
+            </label><br>
+            <label>Ввкдите дату рождения:
+                <input class="date" type="date" name="dateOfBirth" value="2010-10-10" required>
+            </label><br>
+            <label>Введите email:
+                <input class="email" type="email" name="email" value="chusoveg17@gmail.com" required>
+            </label><br>
+            <label>Введите номер телефона:
+                <input class="phone" type="tel" name="phone" value="88005553535" required>
+            </label><br>
+            <label class="checkboxLabel">Я принимаю все условия
+                <input class="checkbox" type="checkbox" name="rules" value="true" required>
+                <span></span>
+            </label><br>
+            <label>
+                <input class="reset" type="reset" name="reset">
+            </label>
+            <input class="submit" type="submit"><br>
+        </fieldset>
     </form>
-
 </main>
+<script src="validation.js"></script>
 </body>
 </html>
