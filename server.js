@@ -3,7 +3,6 @@ const app = express();
 const port = 3000;
 const constructPageBody = require('./checkOrder');
 
-
 const pageHead =
 `
 <!DOCTYPE html>
@@ -45,4 +44,3 @@ app.post('/pets/orders', (request, response) => {
 
     response.send(`${pageHead}${pageBody}${pageFoot}`);
 });
-
