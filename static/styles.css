@@ -22,10 +22,85 @@ h1 {
     color: rgba(173,38,164,0.67);
 }
 
+form {
+    padding: 30px;
+    border: 1px solid rgba(173,38,164,0.67);
+    border-radius: 10px;
+    font-family: "Segoe UI Light", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+input {
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(179, 179, 179, 0.67);
+    padding: 2px;
+}
+
+select {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+select:hover, select:focus {
+    border-color: rgba(173,38,164,0.67);
+    appearance: rgba(173,38,164,0.67);
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.sex::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: rgba(173,38,164,0.67);
+    display: inline-block;
+    border-radius: 50%;
+    margin-left: 30px;
+    margin-right: 5px;
+}
+
+input[type=radio]:checked + .sex:before {
+    content: "\2022";
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    line-height: 18px;
+}
+
+.btn{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.sub-btn {
+    border: 1px solid rgba(173,38,164,0.67);
+}
+
+.res-btn {
+    border: 1px solid rgba(20, 194, 218, 0.733);
+}
+
 .error {
     color: rgba(173,30,24,0.88);
 }
 
 .orders {
     margin: 20px 0;
+}
+
+fieldset {
+    border: 1px solid rgba(173,38,164,0.67);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-family: "Segoe UI Light", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: rgba(173,38,164,0.67);
 }

@@ -9,8 +9,76 @@
 <main>
     <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
+   <form action="/pets/orders" method="POST">
+        <fieldset>
+            <legend>Информация о животном</legend>
+            <label for="petType">
+                Животное:
+                <select id="petType" name="petType" required>
+                    <option value="dog">Собака</option>
+                    <option value="cat">Кошка</option>
+                    <option value="tiger">Тигор</option>
+                </select>
+            </label>
+            <br>
+            <label for="gender" name="gender">
+                Пол:
+                <input id="boy" type="radio" name="gender" value="boy" required>
+                <label class="sex" for="boy">Ступид бой</label>
+                <input id="girl" type="radio" name="gender" value="girl" required>
+                <label class="sex" for="girl">Ступид девка</label>
+                <input id="none" type="radio" name="gender" value="none" required>
+                <label class="sex" for="none">Ступид девка бой</label>
+            </label>
+            <br>
+            <label for="eyeColor" name="eyeColor">
+                Цвет глаз:
+                <input type="color" id="eyeColor" name="eyeColor" required>
+            </label>
+            <br>
+            <label for="tailLength" name="tailLength">
+                Длина хвоста:
+                0см <input type="range" id="tailLength" name="tailLength" min="0" max="100" required> 100см
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Личная информация</legend>
+            <label for="name" name="name">
+                Имя:
+                <input type="text" id="name" name="name" placeholder="Имя" required>
+            </label>
+            <br>
+            <label for="dateOfBirth" name="dateOfBirth">
+                Дата рождения:
+                <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+            </label>
+            <br>
+            <label for="email" name="email">
+                Электронная почта:
+                <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
+            </label>
+            <br>
+            <label for="phone" name="phone">
+                Номер телефона:
+                <input class="phone" type="text" id="phone" name="phone" placeholder="+7 (123) 456-78-90" required>
+            </label>
+            <br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Согласие на обработку персональных данных</legend>
+            <label for="rules" name="rules">
+                <input type="checkbox" id="rules" name="rules" value="true" required>Понимаю и принимаю
+            </label>
+            <br>
+        </fieldset>
+
+
+        <input type="submit" class="btn sub-btn">
+        <input type="reset" class="btn res-btn">
+   </form>
 
 </main>
 </body>
+<script src="valid.js"></script>
 </html>
