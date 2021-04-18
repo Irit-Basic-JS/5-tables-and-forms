@@ -29,3 +29,33 @@ h1 {
 .orders {
     margin: 20px 0;
 }
+form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px #cccccc;
+    border-radius: 10%;
+}
+select{
+    width: 95%;
+    height: 24px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 2px 5px;
+    box-sizing: content-box;
+    border: 1px solid #cccccc;
+}
+.genderChoice{
+    display: inline-block;
+    border: 3px dotted green;
+    padding: 10px;
+}
+.rules{
+    color: red;
+    font-size: 18px;
+}
+.rules,
+.submit,
+.reset{
+    display: inline-block;
+}

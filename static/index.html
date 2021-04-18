@@ -8,9 +8,52 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
-
-    <!--Форму размещай тут-->
-
+    <form method="POST" action='/pets/orders'>  
+        <label class="typePet">
+            Тип животного<br>
+            <select name="petType">
+            <option value="tiger">тигр</option>
+            <option value="cat">кошка</option>
+            <option value="dog">собака</option>
+            </select>
+        </label><br>
+        <label class="genderChoice">
+            <input type="radio" value="boy" name="gender">мальчик
+            <input type="radio" value="girl" name="gender">девочка
+            <input type="radio" value="none" name="gender">не определился
+        </label><br>
+        <label>
+            Цвет глаз
+            <input type="color" name="eyeColor">
+        </label><br>
+        <label>
+            Длина хвоста
+            <input type="number" name="tailLength" min="7" max="120" placeholder="69">
+        </label><br>
+        <label>
+            Имя хозяина
+            <input type="text" name="name" min="3" max="50" placeholder="Кузя">
+        </label><br>
+        <label>
+            дата рождения
+            <input type="datetime" name="dateOfBirth" placeholder="12.12.2001">
+        </label><br>
+        <label>
+            Ваш email
+            <input type="email" name="email" placeholder="example@mail.ru">
+        </label><br>
+        <label>
+            Ваш телефон
+            <input type="tel" name="phone" placeholder="+78005553535">
+        </label><br>
+        <label class="rules">
+            Я согласен с правилами и беру это пушистое чудовище
+            <input type="checkbox" name="rules" value="true" checked>
+        </label><br>
+        <label class="submit"><input type="submit" value="отправить"></label>
+        <label class="reset"><input type="reset" value="Сбросить"></label>
+    </form>
 </main>
+<script src="validation.js"></script>
 </body>
 </html>
