@@ -1,5 +1,6 @@
 body {
     background-color: #F2F2F2;
+    font-family: "Segoe UI Light", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 main {
@@ -20,6 +21,58 @@ h1 {
     font-size: 50px;
     text-align: center;
     color: rgba(173,38,164,0.67);
+}
+
+fieldset {
+    border: 2px solid rgba(173,38,164,0.67);
+    border-radius: 10px;
+    margin: 30px;
+}
+
+legend {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgba(173,38,164,0.67);
+}
+
+.order label {
+    color: #142842;
+    display: block;
+    font-weight: 300px;
+}
+
+.order legend{
+    margin-bottom: 4px;
+}
+
+.order .btn {
+   border: 2px solid rgba(173,38,164,0.67);
+   cursor: pointer;
+   font-weight: bold;
+   padding: 8px 16px;
+   margin-left: 30px;
+}
+
+.order .btn-reset{
+    border-color: rgba(23, 221, 205, 0.932);
+}
+
+input {
+    background: #fff;
+    border: 1px solid #c6c7cc;
+    border-radius: 5px;
+    font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1);
+    color: #636466;
+    padding: 6px;
+    margin: 10px;
+}
+
+select {
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 7px;
+    margin-top: 5px;
 }
 
 .error {
