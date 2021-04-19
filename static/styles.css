@@ -1,5 +1,6 @@
 body {
     background-color: #F2F2F2;
+    font-size: 16px;
 }
 
 main {
@@ -19,13 +20,132 @@ h1 {
     margin-top: 0;
     font-size: 50px;
     text-align: center;
-    color: rgba(173,38,164,0.67);
+    color: rgba(220, 20, 60, 0.67);
 }
 
-.error {
-    color: rgba(173,30,24,0.88);
+.error { color: rgba(173,30,24,0.88); }
+
+.orders { margin: 20px 0; }
+
+form {
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid rgba(220, 20, 60, 0.67);
+    border-radius: 20px;
+    padding: 30px;
 }
 
-.orders {
-    margin: 20px 0;
+div {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(255, 192, 203, 0.3);
+    border-radius: 10px;
+    text-align: center;
+}
+
+label.caption {
+    display: inline-block;
+    padding: 10px;
+
+    color: #808080;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.gender .caption,
+.tailLength .caption {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.petType select {
+    width: 200px;
+    height: 40px;
+    border: 1px solid rgba(220, 20, 60, 0.67);
+    border-radius: 10px;
+    padding: 5px 10px;
+
+    font-size: 18px;
+    font-family: inherit;
+    color: #4E5159;
+}
+
+.gender-radio {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-right: 5px;
+    border: 1px solid rgba(220, 20, 60, 0.67);
+    border-radius: 10px;
+    background-color: #FFFFFF;
+
+    font-size: 18px;
+    color: #4E5159;
+}
+
+input[type=color] {
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+}
+
+input[type=range] {
+    width: 300px;
+    margin-top: 15px;
+}
+
+.tailLength span {
+    font-size: 20px;
+    color: #808080;
+}
+
+input[type=text], 
+input[type=date],
+input[type=email],
+input[type=tel] {
+    width: 200px;
+    height: 40px;
+    border: 1px solid rgba(220, 20, 60, 0.67);
+    border-radius: 10px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+
+    font-size: 18px;
+    font-family: inherit;
+    color: #4E5159;   
+}
+
+.petType select:focus,
+input[type=text]:focus,
+input[type=date]:focus,
+input[type=email]:focus,
+input[type=tel]:focus {
+    outline: none;
+}
+
+.rules {
+    color: #808080;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.button {
+    background-color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+input[type=submit],
+input[type=reset] {
+    margin-right: 10px;
+    padding: 10px 15px;
+    border: 1px solid rgba(220, 20, 60, 0.67);
+    border-radius: 10px;  
+    background-color: rgba(255, 192, 203, 0.3);
+    color: #808080;
+    font-size: 18px;
+    font-family: inherit;
 }

@@ -6,11 +6,68 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<main>
-    <h1>Найди себе друга!</h1>
+    <main>
+        <h1>Найди себе друга!</h1>
+        <form action="/pets/orders" method="POST">
+            <div class="petType">
+                <label for="petType" class="caption">Тип животного</label>
+                <select name="petType" id="petType">
+                    <option value="cat">Кот</option>
+                    <option value="dog">Собака</option>
+                    <option value="tiger">Тигр</option>
+                </select>
+            </div>
 
-    <!--Форму размещай тут-->
+            <div class="gender">
+                <label class="caption">Пол животного</label>
+                <label class="gender-radio">Мужской <input type="radio" name="gender" value="boy"></label>
+                <label class="gender-radio">Женский <input type="radio" name="gender" value="girl"></label>
+                <label class="gender-radio">Не имеет значения <input type="radio" name="gender" value="none"></label>
+            </div>
 
-</main>
+            <div class="eyeColor">
+                <label for="eyeColor" class="caption">Цвет глаз</label>
+                <input type="color" name="eyeColor" id="eyeColor">
+            </div>
+
+            <div class="tailLength">
+                <label for="tailLength" class="caption">Длина хвоста</label>
+                <span>7 </span><input type="range" name="tailLength" id="tailLength" min="7" max="120" value="25"><span> 120</span>
+            </div>
+            
+            <div class="name">
+                <label for="name" class="caption">Имя животного</label>
+                <input type="text" name="name" id="name">
+            </div>
+
+            <div class="dateOfBirth">
+                <label for="dateOfBirth" class="caption">Дата рождения</label>
+                <input type="date" name="dateOfBirth" id="dateOfBirth">
+            </div>
+
+            <div class="email">
+                <label for="email" class="caption">Email</label>
+                <input type="email" name="email" id="email" placeholder="address@mail.ru">
+            </div>
+
+            <div class="phone">
+                <label for="phone" class="caption">Телефон</label>
+                <input type="tel" name="phone" id="phone" placeholder="+7 (999) 999-99-99">
+            </div>
+
+            <div class="rules">
+                <input type="checkbox" name="rules" id="rules" value="true">
+                <label for="rules" class="rules">С правилами согласен(-а)</label>
+            </div>
+
+            <div class="button">
+                <input type="submit" value="Отправить">
+                <input type="reset" value="Сбросить">
+            </div>
+            
+        </form>
+    </main>
+
+    <script src="validation.js"></script>
 </body>
 </html>
