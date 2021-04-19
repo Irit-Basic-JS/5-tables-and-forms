@@ -1,16 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Форма выбора питомца</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
 <main>
     <h1>Найди себе друга!</h1>
-
-    <!--Форму размещай тут-->
-
+    <form action="/pets/orders" method="POST">
+        <ul>
+            <li>
+                <label>Цвет глаз:</label>
+                <input name="eyeColor" type="color" value="#006400">
+            </li>
+            <li>
+                <label>Пол:</label>
+                <select name="gender" size="1" required>
+                    <option selected value="none">Неважно</option>
+                    <option value="boy">Мужской</option>
+                    <option value="girl">Женский</option>
+                   </select>
+            </li>
+            <li>
+                <label>Тип животного:</label>
+                <select name="petType" size="1" required>
+                    <option selected value="cat">Кошка</option>
+                    <option value="dog">Собака</option>
+                    <option value="tiger">Тигр</option>
+                   </select>
+                
+            </li>
+            <li>
+                <label>Длина хвоста в см:</label><input max="120" min="7" name="tailLength" type="number" placeholder="Хвостик" value="10">
+            </li>
+            <li>
+                <label>Имя:</label>
+                <input maxlength="50" minlength="3" name="name" type="text" placeholder="Красивое имя" required>
+            </li>
+            <li>
+                <label>Дата рождения:</label>
+                <input name="dateOfBirth" type="date" value="2001-01-01" required>
+            </li>
+            <li>
+                <label>E-mail:</label>
+                <input name="email" type="email" placeholder="example@example.com" required>
+            </li>
+            <li>
+                <label>Ваш телефон:</label>
+                <input name="phone" type="tel" placeholder="+7XXXXXXXXXX" required>
+            </li>
+            <li>
+                <label>Согласен на всё!</label>
+                <input name="rules" type="checkbox" value="true" required>
+            </li>
+            <li class="button">
+                <input type="submit">
+            </li>
+            <li class="button">
+                <input type="reset">
+            </li>
+        </ul>
+    </form>
 </main>
 </body>
 </html>

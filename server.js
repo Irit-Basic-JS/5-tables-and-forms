@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-const constructPageBody = require('./checkOrder');
+const checkOrder = require('./newCheckOrder');
 
 
 const pageHead =
@@ -39,7 +39,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.post('/pets/orders', (request, response) => {
     const reqBody = request.body;
-    const pageBody = constructPageBody(reqBody);
+    const pageBody = checkOrder.constructPageBody(reqBody);
 
     console.log(request.body);
 
