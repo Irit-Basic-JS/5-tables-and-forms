@@ -29,3 +29,21 @@ h1 {
 .orders {
     margin: 20px 0;
 }
+
+.form {
+    background: #c3c3c3;
+    border: 5px solid rgba(173,38,164,0.67);
+    border-radius: 10px;
+    padding: 10px;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 15px;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+input, select{
+    border: 1px solid  rgba(173,38,164,0.67);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}

@@ -7,11 +7,12 @@
 </head>
 <body>
 <main>
+    <div class = 'form'>
     <h1>Найди себе друга!</h1>
-    <form action = '/pets/orders' method = 'POST'>
+    <form action = '/pets/orders' method = 'POST' class = 'formWithValidation'>
         <label>
-            Выберите животное
-            <select name="petType">
+            Выберите животное:
+            <select name="petType" class = 'field'>
                 <option value="cat" selected>Кот</option>
                 <option value="dog">Собака</option>
                 <option value="tiger">Тигр</option>
@@ -20,7 +21,7 @@
 
         <label>
             Пол животного:
-            <select name="gender">
+            <select name="gender" class = 'field'>
                 <option value="none" selected>Не важно</option>
                 <option value="boy">Мальчик</option>
                 <option value="girl">Девочка</option>
@@ -29,42 +30,45 @@
 
         <label>
             Цвет глаз:
-            <input type = 'color' name = 'eyeColor'>
+            <input type = 'color' name = 'eyeColor' class = 'field'>
         </label> <br>
 
         <label>
             Длина хвоста:
-            <input type = 'number' min = '7' max = '120' name = 'tailLength'>
+            <input type = 'number' min = '7' max = '120' name = 'tailLength' class = 'field'>
         </label> <br>
 
         <label>
             Имя:
-            <input type = 'text' minLength = '3' maxLength = '50' name = 'name'>
+            <input type = 'text' minLength = '3' maxLength = '50' name = 'name' class = 'name field'>
         </label> <br>
 
         <label>
             Дата рождения:
-            <input type = 'date' name = 'dateOfBirth'>
+            <input type = 'date' name = 'dateOfBirth' class = 'field'>
         </label> <br>
 
         <label>
             Емайл:
-            <input type = 'email' name = 'email'>
+            <input type = 'email' name = 'email' class = 'email field'>
         </label> <br>
 
         <label>
             Телефон:
-            <input type = 'tel' name = 'phone'>
+            <input type = 'tel' name = 'phone' class = 'phone field'>
         </label> <br>
 
         <label>
-            Правила:
-            <input type = 'checkbox' value = 'true' name = 'rules'>
+        Я согласен с правилами
+            <input type = 'checkbox' value = 'true' name = 'rules' class = 'field'>
         </label> <br>
 
-        <input type = 'submit'>
-    </form>
+        <input type = 'submit' value='Отправить'>
 
+        <input type='reset' value='Сбросить'>
+    </form>
+    </div>
 </main>
+<script src="valid.js"></script>
 </body>
 </html>
