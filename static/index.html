@@ -20,9 +20,9 @@
 
             <div class="gender">
                 <label class="caption">Пол животного</label>
-                <label class="gender-radio">Мужской <input type="radio" name="gender" value="boy"></label>
-                <label class="gender-radio">Женский <input type="radio" name="gender" value="girl"></label>
-                <label class="gender-radio">Не имеет значения <input type="radio" name="gender" value="none"></label>
+                <label class="gender-radio">Мужской <input type="radio" name="gender" value="boy" required></label>
+                <label class="gender-radio">Женский <input type="radio" name="gender" value="girl" required></label>
+                <label class="gender-radio">Не имеет значения <input type="radio" name="gender" value="none" required></label>
             </div>
 
             <div class="eyeColor">
@@ -37,7 +37,7 @@
             
             <div class="name">
                 <label for="name" class="caption">Имя животного</label>
-                <input type="text" name="name" id="name">
+                <input type="text" name="name" id="name" required>
             </div>
 
             <div class="dateOfBirth">
@@ -47,16 +47,16 @@
 
             <div class="email">
                 <label for="email" class="caption">Email</label>
-                <input type="email" name="email" id="email" placeholder="address@mail.ru">
+                <input type="email" name="email" id="email" placeholder="address@mail.ru" required>
             </div>
 
             <div class="phone">
                 <label for="phone" class="caption">Телефон</label>
-                <input type="tel" name="phone" id="phone" placeholder="+7 (999) 999-99-99">
+                <input type="tel" name="phone" id="phone" placeholder="+7 (999) 999-99-99" required>
             </div>
 
             <div class="rules">
-                <input type="checkbox" name="rules" id="rules" value="true">
+                <input type="checkbox" name="rules" id="rules" value="true" checked required>
                 <label for="rules" class="rules">С правилами согласен(-а)</label>
             </div>
 
