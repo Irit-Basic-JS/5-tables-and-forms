@@ -10,6 +10,57 @@
     <h1>Найди себе друга!</h1>
 
     <!--Форму размещай тут-->
+    <form action="/pets/orders" method="POST">
+        <fieldset>
+            <label class="petType">
+                <p>Выберите тип питомца: 
+                <select name="typePet" id="">
+                    <option value="cat">Кошка</option>
+                    <option value="dog">Собака</option>
+                    <option value="cow">Корова</option>
+                </select></p>
+            </label>
+            
+            <label calss="sexOfPet">
+                <p><input type="radio" name="sex" value="boy" checked>Мальчик</p>
+                <p><input type="radio" name="sex" value="girl">Девочка</p>
+            </label>
+            
+            <label class="eyeColor">
+                <p>Выберите цвет глаз: <input type="color" name="eyeColor"></p> 
+            </label>
+            
+            <label class="tailLength">
+                <p>Выберите длину хвоста: <input type="number" name="legthTail" value="10" min="3" max="15"></p>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Расскажите о себе</legend>
+            <label>
+                <p>Ваше имя: <input type="text" name="name" placeholder="Имя"></p> 
+            </label>
+
+            <label>
+                <p>Email: <input type="text" name="email" class="email" placeholder="Ваш email"></p>
+            </label>
+
+            <label>
+                <p>Дата рождения: <input type="date" name="birthday"></p> 
+            </label>
+
+            <label>
+                <p>Номер телефона: <input type="tel" name="phone" class="phoneNumber"></p> 
+            </label>
+
+            <label>
+                <p>Я согласен с правилами <input type="checkbox" name="confirm" checked></p> 
+            </label>
+        </fieldset>
+
+        <input type="submit" name="submit" value="Отправить" class="submit">
+        <input type="reset" name="reset" value="Сбросить" class="reset">
+    </form>
 
 </main>
 </body>

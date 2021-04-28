@@ -29,3 +29,33 @@ h1 {
 .orders {
     margin: 20px 0;
 }
+
+fieldset {
+    border: 7px solid rgba(173,38,164,0.67);
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 20px;
+    font-family: "Segoe UI Light", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+}
+
+p {
+    font-size: 18px;
+    font-family: "Segoe UI Light", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+}
+
+.submit, .reset {
+    border: 3px solid rgba(173,38,164,0.67);
+    border-radius: 20px;
+    background-color:rgba(173,38,164,0.67);
+    font-size: 16px;
+    font-family: "Segoe UI Light", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    padding: 10px;
+    margin: 20px;
+}
+
