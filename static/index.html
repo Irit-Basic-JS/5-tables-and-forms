@@ -9,7 +9,30 @@
 <main>
     <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
+    <form action="/pets/orders" method="POST">
+
+        <input name="eyeColor" type="color"><br>Цвет глаз
+        Гендер
+        <input name="gender" type="radio" value="boy">Мужской
+        <input name="gender" type="radio" value="girl">Женский
+        <input name="gender" type="radio" value="none">Неважн<br>
+        Тип животного
+        <input name="petType" type="radio" value="cat">Кошка
+        <input name="petType" type="radio" value="dog">Собака
+        <input name="petType" type="radio" value="tiger">Тигр<br>
+        Длина хвоста
+        <input name="tailLength" type="number" min="7" max="120"><br>
+        Имя
+        <input name="name" type="text" minlength="3" maxlength="50"><br>
+        Дата рождения
+        <input name="dateOfBirth" type="date" ><br>
+        Мэйл
+        <input name="email" type="email" ><br>
+        Телефон
+        <input name="phone" type="tel" required><br>
+        <input name="rules" type="checkbox" value="true">Согласен на всё!<br>
+        <input type="submit">
+    </form>
 
 </main>
 </body>
