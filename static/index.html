@@ -8,9 +8,68 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
+    <form action="/pets/orders" method="POST">
+        <fieldset>
+            <legend>Информация о питомце</legend>
+            <label for="petType">Вид питомца:
+                <select name="petType" id="petType" required>
+                    <option value="dog" selected>Собачка</option>
+                    <option value="cat">Кошка</option>
+                    <option value="fish">Рыбка</option>
+                </select>
+            </label><br>
 
-    <!--Форму размещай тут-->
+            <label for="gender">Пол питомца:
+                <input type="radio" name="gender" id="gender" value="boy">Мальчик
+                <input type="radio" name="gender" id="gender" value="girl">Девочка
+                <input type="radio" name="gender" id="gender" value="none" checked>Пол неважен
+            </label><br>
 
+            <label for="eyeColor" name="eyeColor">Цвет глаз:
+                <input type="color" id="eyeColor" name="eyeColor" required>
+            </label><br>
+
+            <label for="tailLength" name="tailLength">Длина хвоста:
+                0 см <input type="range" name="tailLength" value="25" min="0" max="100" required> 100 см
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Личная информация</legend>
+            <label for="name" name="name">
+                Ваше имя:
+                <input type="text" id="name" name="name" placeholder="Имя" required>
+            </label><br>
+
+            <label for="dateOfBirth" name="dateOfBirth">
+                Дата рождения:
+                <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+            </label><br>
+
+            <label for="email" name="email">
+                Email:
+                <input type="email" id="email" name="email" placeholder="example@gmail.com">
+            </label><br>
+
+            <label for="phone" name="phone">
+                Номер телефона:
+                <input type="phone" id="phone" name="phone" placeholder="8-800-555-35-35" required>
+            </label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Согласие на обработку персональных данных</legend>
+            <label for="rules" name="rules">
+                <input type="checkbox" checked id="rules" name="rules" value="true" required>
+                Я согласен и принимаю условия на обработку персональных данных
+            </label><br>
+        </fieldset>
+
+        <input type="submit" class="submit" value="Отправить">
+        <input type="reset" class="reset" value="Сбросить">
+    </form>
+    
 </main>
+<script src="validation.js"></script>
 </body>
 </html>
