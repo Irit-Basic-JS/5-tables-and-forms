@@ -15,18 +15,18 @@
 
             <label for="pet_type">Тип:</label>
             <select name="petType" id="pet_type">
-                <option value="cat">Кот</option>
+                <option value="cat" selected>Кот</option>
                 <option value="dog">Собака</option>
             </select>
             <br>
             <label>Пол:</label>
             <label>
-                <input type="radio" name="gender" value="male">
-                Мужчина
+                <input type="radio" name="gender" value="boy">
+                Мальчик
             </label>
             <label>
-                <input type="radio" name="gender" value="female">
-                Женщина
+                <input type="radio" name="gender" value="girl">
+                Девочка
             </label>
             <label>
                 <input type="radio" name="gender" value="none" checked>
@@ -44,22 +44,24 @@
         <fieldset>
             <legend>О хозяине</legend>
             <label for="name">Имя:</label>
-            <input type="text" name="name" id="name" placeholder="">
+            <input type="text" name="name" id="name" value="Alex">
             <br>
             <label for="date_of_birth">Дата рождения:</label>
-            <input type="date" name="dateOfBirth" id="date_of_birth">
+            <input type="date" name="dateOfBirth" id="date_of_birth" value="2021-01-01">
             <br>
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" placeholder="example@mail.ru">
+            <span class="invalid-email"></span>
             <br>
             <label for="phone">Телефон:</label>
             <input type="tel" name="phone" id="phone" placeholder="+7 (900) 000-00-00">
+            <span class="invalid-phone"></span>
             <br>
             <label for="rules">Даю согласие на обработку персональных данных</label>
             <input type="checkbox" name="rules" id="rules" value="true" checked>
         </fieldset>
         <div class="buttons">
-            <input type="submit" value="Отправить">
+            <input type="submit" value="Отправить" disabled>
             <input type="reset" value="Сбросить">
         </div>
         
@@ -72,5 +74,6 @@
         tail.textContent = tailLength.value;
     }
     </script>
+    <script src="validate.js"></script>
 </body>
 </html>
