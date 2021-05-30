@@ -8,9 +8,54 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
-
-    <!--Форму размещай тут-->
-
+    <form action="/pets/orders" method="post" >
+        <fieldset>
+            <legend>Информация о питомце</legend>
+            <label>
+                <span class="text">Тип питомца:</span>
+                <select name="petType">
+                    <option value="cat">Кот</option>
+                    <option value="dog">Собака</option>
+                    <option value="hare">Заяц</option>
+                </select>
+            </label>
+            <label>
+                <span class="text">Пол животного:</span>
+                <input type="radio" name="gender" value="boy">Мальчик
+                <input type="radio" name="gender" value="girl">Девочка
+            </label>
+            <label>
+                <span class="text">Цвет глаз:</span>
+                <input type="color" name="eyeColor">
+            </label>
+            <label>
+                <span class="text">Длина хвоста:</span>
+                <input type="number" name="tailLength" value="3" min="2" step="1">
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Информация о себе</legend>
+            <label>
+                <span class="text">Ваше имя:</span>
+                <input type="text" name="name" placeholder="Сергей">
+            </label>
+            <label>
+                <span class="text">Дата рождения:</span>
+                <input type="date" name="dateOfBirth">
+            </label>
+            <label> 
+                <span class="text">Email:</span>
+                <input type="email" name="email" placeholder="name@mail.ru">
+            </label>
+            <label>
+                <span class="text">Телефон:</span>
+                <input type="tel" name="phone" placeholder="+7 (900) 333-22-22" required>
+            </label>
+        </fieldset>
+        <input type="submit" name="submit" value="Отправить" class="buttonw">
+        <input type="reset" name="reset" value="Сбросить" class="buttonw">
+    </form>
+    <script src="validation.js"></script>
 </main>
 </body>
 </html>
