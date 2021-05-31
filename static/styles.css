@@ -1,5 +1,5 @@
 body {
-    background-color: #F2F2F2;
+    background-color: black;
 }
 
 main {
@@ -14,12 +14,11 @@ main {
 }
 
 h1 {
-    font-family: "Segoe UI Light", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     margin-top: 0;
-    font-size: 50px;
+    font-size: 100px;
     text-align: center;
-    color: rgba(173,38,164,0.67);
+    color: black;
 }
 
 .error {
@@ -28,4 +27,24 @@ h1 {
 
 .orders {
     margin: 20px 0;
+}
+form {
+    background: #233435;
+    border: 3px solid white;
+    padding: 30px;
+    color: white;
+    width: 45%;
+    margin: 100px auto;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.submit, .reset {
+    border-radius: 15px;
+    background-color:rgb(30, 37, 32);
+    font-size: 16px;
+    font-weight: bold;
+    padding: auto;
+    margin: auto 50px auto;
+    color: white;
 }
