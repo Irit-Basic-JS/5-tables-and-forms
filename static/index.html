@@ -10,7 +10,74 @@
     <h1>Найди себе друга!</h1>
 
     <!--Форму размещай тут-->
+    <form action="/pets/orders" method="POST">
+        <fieldset>
+            <legend>Информация о питомце</legend>
+            <label>
+                Тип животного
+                <select name="petType">
+                    <option value="dog">Собака</option>
+                    <option value="cat">Кошка</option>
+                    <option value="rabbit">Кролик</option>
+                </select>
+            </label>
+            
+            <label>
+                Цвет глаз
+                <input type="color" name="eyeColor">
+            </label>
+            
+            <label>
+                Длина хвоста
+                <input type="number" name="tailLength" min="7" max="120" value="7">
+            </label>
+            
+            <label>
+                Пол животного
+                <label>
+                    <input type="radio" name="gender" value="boy"> М
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="girl"> Ж
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="none" checked> Не определился
+                </label>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Информация о себе</legend>
+            <label>
+                Ваше имя
+                <input type="text" name="name" placeholder="Введите имя" minlength="3" maxlength="50" required>
+            </label>
+            
+            <label>
+                Номер телефона
+                <input type="tel" name="phone" class="phone" id="phone" placeholder="+7 (900) 000-00-00" required>
+            </label>
+            
+            <label>
+                Email
+                <input type="email" name="email" placeholder="example@mail.ru" required>
+            </label>
+            
+            <label>
+                Дата рождения
+                <input type="date" name="dateOfBirth" required>
+            </label>
+            
+            <label>
+                <input type="checkbox" name="rules" value="true" required> Я согласен с условиями...
+            </label>
+        </fieldset>
+        <label class="buttons">
+            <input type="submit" name="submit" value="Отправить">
+            <input type="reset" name="reset" value="Сбросить">
+        </label>
+    </form>
 
 </main>
 </body>
+<script src="validation.js"></script>
 </html>
