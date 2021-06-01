@@ -1,31 +1,100 @@
 body {
     background-color: #F2F2F2;
+    padding: 10px;
 }
 
-main {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 30px;
-    background: white;
-    min-height: calc(100vh - 60px);
-    border-radius: 20px;
-}
-
-h1 {
-    font-family: "Segoe UI Light", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 300;
+main  {
     margin-top: 0;
-    font-size: 50px;
+    font-size: 25px;
     text-align: center;
-    color: rgba(173,38,164,0.67);
+    color: rgba(2, 2, 2, 0.67);
+    color: rgba(0, 0, 0, 0.67);
 }
 
 .error {
-    color: rgba(173,30,24,0.88);
+    color: rgba(255, 103, 98, 0.88);
+    color: rgba(218, 9, 2, 0.88);
 }
 
 .orders {
-    margin: 20px 0;
+    margin: 10px 0;
+} 
+
+
+.select {
+    width: 70%;
+    padding: 15px 17px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #fefeff;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 1px 2px;
+    text-decoration: none;
+    margin: 3px 1px;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+}
+
+.checkboxLabel {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+.checkboxLabel input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkboxLabel span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    
+}
+
+.checkboxLabel span:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 3px;
+    width: 2px;
+    height: 5px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(90deg);
+}
+
+.checkboxLabel:hover span {
+    background-color: rgb(191, 101, 209);
+}
+
+.checkboxLabel input:checked ~ span {
+    background-color: #000000;
+}
+
+.checkboxLabel input:checked ~ span:after {
+    display: block;
+}
+
+fieldset {
+    padding: 1px;
+    margin: 1px;
+}
+
+input {
+    margin-top: 1px;
+    border-radius: 1%;
 }
