@@ -7,10 +7,99 @@
 </head>
 <body>
 <main>
-    <h1>Найди себе друга!</h1>
+    <h1>Make your friends!</h1>
+    <form method="post" action="/pets/orders">
+        <label>Выберите тип животного
+            <select name="petType">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="snake">Snake</option>
+            </select>
+        </label><br>
+        <label>Выберите пол 
+            <select name="gender">
+                <option value="boy">Male</option>
+                <option value="girl">Female</option>
+                <option value="none">I don't know</option>
+            </select>
+        </label><br>
+        <label>Выберите цвет глаз
+            <input type="color" name="eyeColor" value="#1234ff" required>
+        </label><br>
+        <label>Введите длину хвоста
+            <input type="number" name="tailLength" min="7" max="120" value="15" required>
+        </label><br>
+        <label>Введите имя
+            <input name="name" type="text" minlength="3" maxlength="50" value="someanimal" required>
+        </label><br>
+         </label><br>
+            <label>Введите email
+                <input type="email" name="email" value="ilovejs@mail.ru" required>
+            </label><br>
+        </label><br>
+        <label>Ввeдите дату рождения
+            <input type="date" name="dateOfBirth" value="01.01.01" required>
+        </label><br>
+        <label>Введите email
+            <input type="email" name="email" value="ilovejs@mail.ru" required>
+        </label><br>
+        <label>Введите номер телефона
+            <input type="tel" name="phone" value="89126612794" required>
+        </label><br>
+        <label>do not know
+            <input type="checkbox" name="rules" value="true" checked>
+        </label><br>
+        <input type="submit"><br>
+    <form class="form" method="post" action="/pets/orders">
+        <fieldset>
+            <legend>Информация о животном</legend>
+            <label>Выберите тип животного:
+                <select class="select" name="petType">
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="snake">Snake</option>
+                </select>
+            </label><br>
+            <label>Выберите пол животного:
+                <input type="radio" name="gender" value="boy">Male
+                <input type="radio" name="gender" value="girl">Female
+                <input type="radio" name="gender" value="none" checked>I don't know
+            </label><br>
+            <label>Выберите цвет глаз:
+                <input class="color" type="color" name="eyeColor" value="#1234ff" required>
+            </label><br>
+            <label>Введите длину хвоста :
+                <input class="number" type="number" name="tailLength" min="7" max="120" value="15" required>
+            </label><br>
+        </fieldset>
+        <fieldset>
+            <legend>Информация о Себе</legend>
+            <label>Введите Ваше имя: 
+                <input class="text" name="name" type="text" minlength="3" maxlength="50" value="someanimal" required>
+            </label><br>
+            <label>Введите дату рождения:
+                <input class="date" type="date" name="dateOfBirth" value="01.01.01" required>
+            </label><br>
+            <label>Введите email:
+                <input class="email" type="email" name="email" value="ilovejs@mail.ru" required>
+            </label><br>
+            <label>Введите номер телефона:
+                <input class="phone" type="tel" name="phone" value="8888888888" required>
+            </label><br>
+            <label class="checkboxLabel"> Принимаю все условия
+                <input class="checkbox" type="checkbox" name="rules" value="true" required>
+                <span></span>
+            </label><br>
+            <label>
+                <input class="reset" type="reset" name="reset">
+            </label>
+            <input class="submit" type="submit"><br>
+        </fieldset>
+    </form>
 
     <!--Форму размещай тут-->
 
 </main>
+<script src="validation.js"></script>
 </body>
 </html>
