@@ -19,7 +19,7 @@ h1 {
     margin-top: 0;
     font-size: 50px;
     text-align: center;
-    color: rgba(173,38,164,0.67);
+    color: rgba(173, 6, 70, 0.67);
 }
 
 .error {
@@ -28,4 +28,44 @@ h1 {
 
 .orders {
     margin: 20px 0;
+}
+
+fieldset {
+    border: 2px solid #c90e56;
+    border-radius: 20px;
+    margin: 30px;
+    padding: 10px 25px;
+}
+
+legend {
+    font-size: 22px;
+    font-weight: bold;
+    color: #880e33;
+}
+
+.submit, .reset {
+    margin: 5px auto;
+    padding: 10px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    border: 2px solid #f1b6c8;
+    border-radius: 20px;
+    background-color:#880e33;
+}
+
+
+select {
+    padding: 5px;
+    margin: 10px 10px;
+    border-radius: 10px;
+}
+
+input[type=radio], input[type="color"], input[type="range"] {
+    margin: 10px 5px;
+}
+
+input[type="text"], input[type="date"], input[type="email"], input[type="phone"] {
+    margin: 10px 5px;
+    border-radius: 5px;
+    border: 2px solid #f85694;
 }
