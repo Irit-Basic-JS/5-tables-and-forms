@@ -9,8 +9,76 @@
 <main>
     <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
+    <form method ="post" action="/pets/orders">
+        <fieldset>
+
+            <legend>Информация о питомце</legend>
+            <lable for="petType" id="petType" required>
+            Тип питомца:
+                <select name="petType">
+                    <option value="dog">Собака</option>
+                    <option value="cat" selected>Кошка</option>
+                    <option value="hedgehog">Еж</option>
+                </select>
+            </lable><br>
+            
+            <label name="gender">
+                 Пол питомца:
+                <input type="radio" name="gender" value="man" value="boy">Мальчик
+                <input type="radio" name="gender" value="woman" value="girl">Девочка
+                <input type="radio" name="gender" value="none" checked>Не определено
+            </label><br>
+            
+            <label>
+                Цвет глаз:
+                <input type="color" name="eyeColor">
+            </label><br>    
+            
+            <label>
+                Длина хвоста:
+                <input type="range" name="tailLength" value="25" min="0" max="110" required>
+            </label>
+                
+        </fieldset>
+
+
+        <fieldset>
+
+            <label>
+                Ваше имя:
+                <input type="text" name="name" value="Александра">
+            </label>
+
+            <label>
+                Дата рождения:
+                <input type="date" name="dateOfBirth">
+            </label>
+            
+            <label>
+                Email:
+                <input type="email" name="email" placeholder="sasha_281200@mail.ru">
+            </label>
+            
+            <label>
+                Телефон:
+                <input type="tel" name="phone" placeholder="8-800-555-3535" required>
+                <!--pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" -->
+            </label>
+
+            <label>
+                Я согласен с правилами:
+                <input type="checkbox" checked name="rules" values="true">
+            </label>
+    
+        </fieldset>
+        
+
+        <input type="submit" class="submit" value="Отправить">
+        <input type="reset" class="reset" value="Сбросить">
+    </form>
+
 
 </main>
+<script src ="validation.js"></script>
 </body>
 </html>

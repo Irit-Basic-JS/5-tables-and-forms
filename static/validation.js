@@ -1,0 +1,21 @@
+let submitButton = document.querySelector('input[type="submit"]');
+let telPhone = document.querySelector('input[type="tel"]');
+let email = document.querySelector('input[type="email"]');
+let form = document.querySelector('form');
+
+function validateEmail() {
+    return email.value.includes('@');
+}
+
+function validatePhone() {
+    const regex = /+7 (\d{3}) \d{3}-\d{2}-\d{2}/;
+    return telPhone.value.match(regex);
+}
+
+form.addEventListener("submit", (e) => {
+    let isValid = validateEmail() && validatePhone();
+    if(!isValid) {
+        alert("Данные не валидны");
+        e.preventDefault();
+    }
+});
