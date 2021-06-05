@@ -3,13 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <title>Форма выбора питомца</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <main>
     <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
+    <form action="/pets/orders" method="POST">
+
+        <fieldset class="data-user my-3">
+            <legend class="mb-3">Ваши данные</legend>
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Имя</label>
+                <input id="name" name="name" type="text" class="form-control" placeholder="Введите ваше имя" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="login" class="form-label">Логин</label>
+                <input id="login" name="login" type="text" class="form-control" placeholder="Введите ваш логин" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Почтовый адрес</label>
+                <input id="email" name="email" type="email" class="form-control" placeholder="name@example.com" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="dateOfBirth" class="form-label">Дата рождения</label>
+                <input id="dateOfBirth" name="dateOfBirth" type="date" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="phone" class="form-label">Номер телефона</label>
+                <input id="phone" name="phone" type="tel" class="form-control" placeholder="+7 (XXX) XXX-XX-XX" required>
+            </div>
+        </fieldset>
+
+        <fieldset class="data-pet my-3">
+            <legend class="mb-3">Данные питомца</legend>
+
+            <div class="mb-3 row">
+                <label for="eyeColor" class="col-sm-2 form-label">Животное</label>
+                <div class="col-sm-4">
+                    <select class="form-select" aria-label="Default select example" name="petType">
+                        <option value="dog" selected>Собака</option>
+                        <option value="cat">Кошка</option>
+                        <option value="tiger">Тигр</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label class="col-sm-2 form-label">Пол питомца</label>
+                <div class="col-sm-6">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="boy" value="boy" required
+                               checked>
+                        <label class="form-check-label" for="boy">Мужской</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="girl" value="girl" required
+                               checked>
+                        <label class="form-check-label" for="girl">Женский</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="none" value="none" required
+                               checked>
+                        <label class="form-check-label" for="none">Неизвестно</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="eyeColor" class="col-sm-2 form-label">Цвет глаз</label>
+                <div class="col-sm-2">
+                    <input type="color" class="form-control form-control-color" id="eyeColor" name="eyeColor" required>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="tailLength" class="col-sm-2 form-label">Длинна хвоста</label>
+                <div class="col-sm-2">
+                    <input type="number" class="form-control" min="7" max="120" step="1" id="tailLength" name="tailLength" required>
+                </div>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="rules" id="rules" required checked value="true">
+                <label class="form-check-label" for="rules">
+                    Я согласен с правилами использования сервиса
+                </label>
+            </div>
+
+        </fieldset>
+
+        <fieldset class="my-4">
+            <button type="submit" name="submit" class="btn btn-primary" required>Отправить</button>
+            <button type="reset" name="reset" class="btn btn-danger" required>Сбросить</button>
+        </fieldset>
+    </form>
+
+    <script src="validation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+            crossorigin="anonymous"></script>
 
 </main>
 </body>
