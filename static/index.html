@@ -8,9 +8,76 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
+    <form method="post" action="/pets/orders">
+        <fieldset>
+            <legend>Информация о питомце</legend>
+            <lable class="typePet">
+                <span class="text">Тип питомца:</span>
+                <select name="petType">
+                    <option value="dog">Собака</option> <!--собаку убери-->
+                    <option value="cat">Кошка</option>
+                    <option value="hedgehog">Еж</option>
+                </select>
+            </lable>
 
-    <!--Форму размещай тут-->
+            <label>
+                <span class="text">Пол питомца:</span>
+                <lable>
+                    <input type="radio" name="gender" value="boy">Мальчик
+                </lable>
+                <lable>
+                    <input type="radio" name="gender" value="girl">Женщина
+                </lable>
+                <lable>
+                    <input type="radio" name="gender" value="none" checked>Не определился
+                </lable>
+            </label>
+
+            <label>
+                Цвет глаз:
+                <input type="color" name="eyeColor">
+            </label>
+
+            <label>
+                Длина хвоста:
+                <input type="number" name="tailLength" value="13" min="7" max="120" step="1">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Информация о себе</legend>
+            <label>
+                Дата рождения:
+                <input type="date" name="dateOfBirth" >
+            </label>
+
+            <label>
+                Ваше имя:
+                <input type="text" name="name" value="Полина">
+            </label>
+
+            <label>
+                Email:
+                <input type="email" name="email" placeholder="polinaSV@gmail.com">
+            </label>
+
+            <lable>
+                Телефон:
+                <input type="tel" name="phone" placeholder="8-800-555-3535" required>
+                <!-- pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" -->
+            </lable>
+
+            <label>
+                Я согласен с правилами и беру это пушистое чудо к Себе.
+                <input type="checkbox" checked name="rules" value="true">
+            </label>
+        </fieldset>
+
+        <input type="submit" name="submit" value="Отправить">
+        <input type="reset" name="reset" value="Сбросить">
+    </form>
 
 </main>
+<script src="validation.js"></script>
 </body>
 </html>
