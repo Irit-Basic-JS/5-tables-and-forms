@@ -28,4 +28,53 @@ h1 {
 
 .orders {
     margin: 20px 0;
+
+    border-collapse: collapse;
+}
+
+.orders tr {
+
+}
+
+.orders td {
+    text-align: center;
+    padding: 10px 15px;
+
+    border: 1px solid lightcoral;
+}
+
+.orders th {
+    text-align: center;
+    padding:  10px 15px;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 25% auto 25%;
+}
+
+form {
+    grid-column: 2 / 3;
+
+    display: flex;
+    flex-direction: column;
+
+    grid-template-columns: 100px auto auto 100px;
+    padding: 20px;
+    border: 1px solid lightskyblue;
+}
+
+.form-row {
+    padding: 10px 35px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.form-row label {
+
+}
+
+.form-row input  {
+
 }
