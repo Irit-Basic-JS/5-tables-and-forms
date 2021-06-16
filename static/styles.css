@@ -29,3 +29,76 @@ h1 {
 .orders {
     margin: 20px 0;
 }
+
+form {
+    width: 700px;
+    margin: 0 auto;
+    border: 1px solid #a7a7a7;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Segoe UI", sans-serif;
+    color: black;
+    background-color: #ffffff;
+}
+
+fieldset {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #2c3e50;
+    border-radius: 5px;
+}
+
+fieldset:last-child {
+    margin-bottom: 0;
+}
+
+fieldset legend {
+    text-align: center;
+    color: #2c3e50;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, select {
+    border-radius: 5px;
+}
+
+input[type="text"],
+input[type="color"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+select {
+    width: 95%;
+    height: 24px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 2px 5px;
+    box-sizing: content-box;
+    border: 1px solid #cccccc;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 6px 15px;
+
+    color: #ffffff;
+
+    background-color: #2c3e50;
+    border: none;
+}
+
+input[type="submit"]:disabled {
+    opacity: 0.25;
+}
+
+.buttons {
+    margin-top: 10px;
+    text-align: center;
+}
