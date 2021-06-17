@@ -1,5 +1,6 @@
 body {
-    background-color: #F2F2F2;
+
+    background-color: rgb(168, 192, 247);
 }
 
 main {
@@ -8,18 +9,19 @@ main {
     max-width: 1000px;
     margin: 30px auto;
     padding: 30px;
-    background: white;
+    background: rgb(222, 235, 202);
     min-height: calc(100vh - 60px);
     border-radius: 20px;
 }
 
 h1 {
-    font-family: "Segoe UI Light", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:  "Segoe UI",  sans-serif;
     font-weight: 300;
     margin-top: 0;
-    font-size: 50px;
+    font-size: 100px;
     text-align: center;
-    color: rgba(173,38,164,0.67);
+    color: rgba(19, 139, 245, 0.67);
+
 }
 
 .error {
@@ -29,3 +31,23 @@ h1 {
 .orders {
     margin: 20px 0;
 }
+form {
+    background: #b0a5ee;
+    border: 3px solid rgba(19, 139, 245, 0.67);;
+    padding: 30px;
+    color: white;
+    width: 45%;
+    margin: 100px auto;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.submit, .reset {
+    border-radius: 15px;
+    background-color:rgb(30, 37, 32);
+    font-size: 16px;
+    font-weight: bold;
+    padding: auto;
+    margin: auto 50px auto;
+    color: white;
+} 
