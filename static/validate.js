@@ -1,11 +1,12 @@
 let form = document.querySelector('form');
 let phone = document.getElementById('phone');
 let email = document.getElementById('email');
+let rules = document.getElementById('rules');
 let submit = document.querySelector('.buttons input[type="submit"]');
 let reset = document.querySelector('.buttons input[type="reset"]');
 
 form.addEventListener('input', function () {
-    if (phone.value && email.value) {
+    if (phone.value && email.value && rules.checked) {
         submit.disabled = false;
     } else {
         submit.disabled = true;
