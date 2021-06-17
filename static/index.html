@@ -38,7 +38,11 @@
             <br>
             <label for="tail_length">Длина хвоста: <span class="tail">25</span></label>
             <br>
-            0<input type="range" id="tail_length" name="tailLength" value="25" min="0" max="50" step="1">50
+            <div class="tail-range">
+                <span class="tail-min">0</span>
+                <input type="range" id="tail_length" name="tailLength" value="25" min="0" max="50" step="1">
+                <span class="tail-max">50</span>
+            </div>
             <br>
         </fieldset>
         <fieldset>
@@ -54,7 +58,7 @@
             <span class="invalid-email"></span>
             <br>
             <label for="phone">Телефон:</label>
-            <input type="tel" name="phone" id="phone" placeholder="+7 (900) 000-00-00">
+            <input type="tel" name="phone" id="phone" placeholder="+7 900 000-00-00">
             <span class="invalid-phone"></span>
             <br>
             <label for="rules">Даю согласие на обработку персональных данных</label>
@@ -75,5 +79,6 @@
     }
     </script>
     <script src="validate.js"></script>
+    <script src="tel.js"></script>
 </body>
 </html>

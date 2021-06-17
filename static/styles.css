@@ -67,21 +67,19 @@ label {
 select {
     padding: 0 5px;
     margin: 5px;
-    background-color: thistle;
 }
 
 select:focus {
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 input {
     display: inline-block;
     margin: 10px 0;
-    background-color: thistle;
 }
 
 input:focus {
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .buttons {
@@ -128,19 +126,38 @@ input[type="color"] {
 
 span.tail {
     padding: 2px 6px;
-    background-color: thistle;
+    color: darkslateblue;
+    background-color: white;
     border: 1px solid darkviolet;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-left: 10px;
     font-size: 14px;
     font-weight: bold;
+}
+
+.tail-range {
+    display: flex;
+    align-items: center;
+}
+
+.tail-max,
+.tail-min {
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.tail-min {
+    padding: 0;
+    padding-right: 10px;
 }
 
 .invalid {
     border: 1px solid red;
 }
 
-span:not(.tail) {
+.invalid-email,
+.invalid-phone {
     color: red;
     margin-left: 5px;
 }

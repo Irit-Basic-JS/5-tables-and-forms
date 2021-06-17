@@ -17,6 +17,9 @@ reset.addEventListener('click', function () {
     phone.classList.remove('invalid');
     form.querySelector('.invalid-email').textContent = '';
     email.classList.remove('invalid');
+    
+    let tail = document.querySelector('.tail');
+    tail.textContent = '25';
 })
 
 submit.addEventListener('click', function (evt) {
@@ -31,18 +34,49 @@ submit.addEventListener('click', function (evt) {
     }
 });
 
-phone.addEventListener('input', function () {
+phone.addEventListener('focusin', function () {
     phone.classList.remove('invalid');
     form.querySelector('.invalid-phone').textContent = ''
+
+    if (!phone.value) {
+        phone.value = '+7 ';
+    }
 })
 
-email.addEventListener('input', function () {
+phone.addEventListener('focusout', function () {
+    if (phone.value.length == 3) {
+        phone.value = '';
+    }
+})
+
+phone.addEventListener('input', function (evt) {
+    if (phone.value.length < 3) {
+        phone.value = '+7 '
+    }
+
+    if (!evt.inputType.startsWith('delete')) {
+        if (phone.value.length == 6) {
+            phone.value += ' ';
+        } else if ([10, 13].includes(phone.value.length)) {
+            phone.value += '-';
+        } else if (phone.value.length == 17) {
+            phone.value = phone.value.slice(0, phone.value.length - 1);
+        }
+        phone.value = phone.value.replace(/[A-ZazА-Яа-я]/, '');
+    } else {
+        if ([6, 10, 13].includes(phone.value.length)) {
+            phone.value = phone.value.slice(0, phone.value.length - 1);
+        }
+    }
+})
+
+email.addEventListener('focus', function () {
     email.classList.remove('invalid');
     form.querySelector('.invalid-email').textContent = ''
 })
 
 function isValidPhone(number) {
-    let regex = /\+\d \(\d\d\d\) \d\d\d-\d\d-\d\d/;
+    let regex = /\+\d \d\d\d \d\d\d-\d\d-\d\d/;
     return number.match(regex);
 }
 
