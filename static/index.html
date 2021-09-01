@@ -8,9 +8,84 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
-
+    <p> Мы найдем питомцев, которые могут стать Вашим маленьким другом.
+        Информация будет направлена на указанный Вами канал связи.
+    </p>
+    <form action="/pets/orders" method="POST">    
+        <section>
+        <h2>Характеристики питомца</h2>
+        <table class="petTable">
+            <tr>
+                <th scope = "col">Животное</th>
+                <th scope = "col">Пол</th>
+                <th scope = "col">Цвет глаз</th>
+                <th scope = "col">Длина хвоста</th>
+                <th scope = "col">Дата рождения</th>
+            </tr>
+            <tr id="mf">
+                <td>
+                    <select name="petType"> 
+                        <option value="cat">Кошка</option>
+                        <option value="dog">Собака</option>
+                        <option value="tiger">Тигр</option>
+                    </select>    
+                </td>
+                <td>
+                    <div><input type="radio" name="gender" value="boy" checked>Мальчик</div>
+                    <div><input type="radio" name="gender" value="girl">Девочка</div>
+                    <div><input type="radio" name="gender" value="none">Не важно</div>
+                </td>
+                <td>
+                    <input type="color" name="eyeColor" value="#5798d4">
+                </td>
+                <td>
+                    <input type="range" min="20" max="120" step="1" value="50" name="tailLength">
+                </td>
+                <td>
+                    <input type="date" name="dateOfBirth" value="2021-07-22">
+                </td> 
+            </tr> 
+        </table>   
+        <p style="text-align:center">
+            <input type="RESET" value = "По умолчанию">
+        </p>
+        </section>
+        
+        <section>
+            <h2>Ваши контактные данные</h2>
+            <table class="contact">  
+                <tr>
+                    <td>
+                        <label>Имя
+                            <input type="text" name="name" placeholder="Введите имя">
+                        </label>
+                    </td>
+                    <td>
+                        <label>E-mail
+                            <input type="email" name="email" placeholder="user@gmail.com">
+                        </label>
+                    </td>
+                    <td>
+                        <label>Моб. телефон
+                            <input type="tel" name="phone" required placeholder="(999)999-99-99">
+                        </label>
+                    </td>
+                </tr>
+            </table>
+        </section>  
+        <p>
+            <q>Ты навсегда в ответе за всех, кого приручил</q> 
+               [Антуан де Сент-Экзюпери <q>Маленький принц</q>]
+        </p>
+        <p>
+            <input type="checkbox" name="rules" value="true" checked required> 
+                Я согласен с условиями и правилами
+        </p>
+        <p><input type="submit" name = "pet" value = "Отправить"></p>
+        
+     
     <!--Форму размещай тут-->
-
+    </form>
 </main>
 </body>
 </html>
