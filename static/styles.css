@@ -19,7 +19,7 @@ h1 {
     margin-top: 0;
     font-size: 50px;
     text-align: center;
-    color: rgba(173,38,164,0.67);
+    color: #3F51B5;
 }
 
 .error {
@@ -28,4 +28,22 @@ h1 {
 
 .orders {
     margin: 20px 0;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel]{
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid darkgray;
+    width: 50%;
+}
+
+.secret-parent{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
