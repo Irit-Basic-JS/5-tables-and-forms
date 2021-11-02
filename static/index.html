@@ -8,9 +8,72 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
-
-    <!--Форму размещай тут-->
-
+    <form action="http://localhost:3000/pets/orders" method="post" oninput="tailLengthOutput.value=tailLength.value">
+        <fieldset>
+            <legend>Питомец</legend>
+            <p>
+                <label> Тип питомца:
+                    <select name="petType" required>
+                        <option value="cat">Котенок</option>
+                        <option value="dog">Щенок</option>
+                        <option value="tiger">Тигренок</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <label> Пол:
+                    <br/><input type="radio" name="gender" value="boy"> Самец
+                    <br/><input type="radio" name="gender" value="girl"> Самка
+                    <br/><input type="radio" name="gender" value="none" checked> Неважно
+                </label>
+            </p>
+            <p>
+                <label> Цвет глаз:
+                    <input type="color" name="eyeColor" required>
+                </label>
+            </p>
+            <p>
+                <label> Длина хвоста:
+                    <input type="range" name="tailLength" min="7" max="120" required>
+                    <output name="tailLengthOutput">64</output>
+                    см
+                </label>
+            </p>
+        </fieldset>
+        <br/>
+        <fieldset>
+            <legend>Хозяин</legend>
+            <p>
+                <label> Ваше имя:
+                    <input type="text" name="name" id="name" required>
+                </label>
+            </p>
+            <p>
+                <label> Год рождения:
+                    <input type="date" name="dateOfBirth" required>
+                </label>
+            </p>
+            <p>
+                <label> Электронная почта:
+                    <input type="email" name="email" id="email" required>
+                </label>
+            </p>
+            <p>
+                <label> Номер телефона:
+                    <input type="tel" name="phone" id="phone" placeholder="89xxxxxxxxx" required>
+                </label>
+            </p>
+            <p>
+                <label> Согласен с <a href="https://www.youtube.com/watch?v=eU37agSGRko&ab_channel=33x3sketch">правилами</a>
+                    <input type="checkbox" name="rules" value="true" required>
+                </label>
+            </p>
+        </fieldset>
+        <br/>
+        <input type="reset">
+        <input type="submit">
+    </form>
 </main>
+<script src="validation.js"></script>
 </body>
 </html>
