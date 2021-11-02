@@ -21,6 +21,7 @@ const pageFoot =
 `
 <a href="/">⃪ Вернуться к форме заказа</a>
 </main>
+<script src="/tableLocalization.js"></script>
 </body>
 </html>
 `;
