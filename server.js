@@ -19,7 +19,7 @@ const pageHead =
 
 const pageFoot =
 `
-<a href="/">⃪ Вернуться к форме заказа</a>
+<a href="/" class="goback">⃪ Вернуться к форме заказа</a>
 </main>
 </body>
 </html>
@@ -38,11 +38,25 @@ app.use(express.static('static'));
 app.use(express.urlencoded({ extended: true }));
 
 app.post('/pets/orders', (request, response) => {
-    const reqBody = request.body;
-    const pageBody = constructPageBody(reqBody);
-
+    const pageBody = validate(request.body);
     console.log(request.body);
 
     response.send(`${pageHead}${pageBody}${pageFoot}`);
 });
 
+function validate(reqBody) {
+    const NAMEREGEX = /^([a-zа-я]+[\s]*)*$/i;
+    if (!NAMEREGEX.test(reqBody.name))
+        return `<p class="error">Ошибка! Имя должно состоять только из букв и не начинаться с пробела.</p>`;
+    
+    const PHONEREGEX = /^((\+7)|8)[9]\d{9}$/;
+    if (!PHONEREGEX.test(reqBody.phone))
+        return `<p class="error">Ошибка! Укажите номер телефона в формате 89ХХХХХХХХХ или +79ХХХХХХХХХ.</p>`;
+
+    const date = new Date(reqBody.dateOfBirth);
+    const sysDate = new Date();
+    if (date > sysDate)
+        return `<p class="error">Ошибка! Дата рождения не может быть позднее сегодняшней даты.</p>`;
+    
+    return constructPageBody(reqBody);
+}
