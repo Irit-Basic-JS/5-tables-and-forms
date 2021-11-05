@@ -13,7 +13,9 @@ main {
     border-radius: 20px;
 }
 
+
 h1 {
+
     font-family: "Segoe UI Light", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
     margin-top: 0;
@@ -22,9 +24,41 @@ h1 {
     color: rgba(173,38,164,0.67);
 }
 
+th {
+	font-weight: bold;
+	padding: 5px;
+	background: pink;
+	border: 1px solid purple;
+  border-radius: 5%;
+}
+td {
+	border: 1px solid blueviolet;
+	padding: 5px;
+}
+
 .error {
     color: rgba(173,30,24,0.88);
 }
+form {
+    
+    background: #fff;
+    box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+    border-radius: 5px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    border-top: 5px solid #0e3721;
+  /*   z-index: 1; */
+    animation: bounce 1.5s infinite;
+  }
+  ::-webkit-input-placeholder {
+    font-size: 1.3em;
+  }
 
 .orders {
     margin: 20px 0;
