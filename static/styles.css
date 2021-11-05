@@ -15,12 +15,25 @@ main {
 
 
 h1 {
+
     font-family: "Segoe UI Light", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
     margin-top: 0;
     font-size: 50px;
     text-align: center;
     color: rgba(173,38,164,0.67);
+}
+
+th {
+	font-weight: bold;
+	padding: 5px;
+	background: pink;
+	border: 1px solid purple;
+  border-radius: 5%;
+}
+td {
+	border: 1px solid blueviolet;
+	padding: 5px;
 }
 
 .error {
