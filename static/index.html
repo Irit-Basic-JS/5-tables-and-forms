@@ -4,13 +4,98 @@
     <meta charset="UTF-8">
     <title>Форма выбора питомца</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="form-styles.css">
 </head>
 <body>
 <main>
     <h1>Найди себе друга!</h1>
-
-    <!--Форму размещай тут-->
-
+    <div class="contact-us">
+        <form action="/pets/orders" method="POST">
+            <div class="row">
+                <label for="petType">Тип питомца:</label>
+                <select id="petType" name="petType" value="cat">
+                    <option value="cat">Кот/Кошка</option>
+                    <option value="dog">Пес/Собака</option>
+                    <option value="tiger">Тигр(ица)</option>
+                </select>
+                <label for="gender">Пол:</label>
+                <select id="gender" name="gender" value="none">
+                    <option value="none">Не важно</option>
+                    <option value="boy">Мальчик</option>
+                    <option value="girl">Девочка</option>
+                </select>
+            </div>
+            <div class="row">
+                <label for="eyeColor">Цвет глаз:</label>
+                <input 
+                    type="color" 
+                    id="eyeColor" 
+                    name="eyeColor" 
+                    value="#e66465">
+                <label for="tailLength">Длина хвоста:</label>
+                <input 
+                    required
+                    type="number" 
+                    id="tailLength" 
+                    name="tailLength" 
+                    min="7" 
+                    max="120"
+                    placeholder="Введите желаемую длину хвоста питомца">
+            </div>
+            
+            <div class="row">
+                <label for="name">Имя:</label>
+                <input 
+                    required
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    minlength="3"
+                    maxlength="20"
+                    placeholder="Введите имя питомца">
+            </div>
+            <div class="row">
+                <label for="dateOfBirth">День рождения:</label>
+                <input 
+                    required
+                    type="date" 
+                    id="dateOfBirth" 
+                    name="dateOfBirth" 
+                    min="1970-01-01" >
+            </div>
+            <div class="row">
+                <label for="email">Ваша электронная почта:</label>
+                <input 
+                    required
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Введите электронную почту">
+            </div>
+            <div class="row">
+                <label for="phone">Ваш номер телефона:</label>
+                <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" placeholder="Введите номер телефона">
+            </div>
+            <div class="row">
+                <label for="rules">Согласие на обработку ваших персональных данных</label>
+                <input 
+                    required
+                    type="checkbox" 
+                    id="rules" 
+                    name="rules" 
+                    value="true">
+            </div>
+            <div class="form-button">
+                <input type="submit" value="Отправить">
+            </div>
+            <div class="form-button">
+                <input type="reset" value="Очистить форму">
+            </div>
+        </form>
+    </div>
 </main>
 </body>
 </html>
