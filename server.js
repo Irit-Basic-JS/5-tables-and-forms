@@ -11,15 +11,16 @@ const pageHead =
 <head>
 <title>Результат заказа питомца</title>
 <link rel="stylesheet" href="/styles.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-<main>
-<h1>Результат заказа питомца</h1>
+<main class="container">
+<h1 class="text-primary">Результат заказа питомца</h1>
 `;
 
 const pageFoot =
 `
-<a href="/">⃪ Вернуться к форме заказа</a>
+<a class="btn btn-primary ps-4" href="/">⃪ Вернуться к форме заказа</a>
 </main>
 </body>
 </html>
