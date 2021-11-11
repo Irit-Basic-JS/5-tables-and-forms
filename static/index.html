@@ -9,8 +9,73 @@
 <main>
     <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
+    <form action="http://localhost:3000/pets/orders" method="post">
+        <div class="formItem">
+            <span>Тип питомца</span>
+            <select name="petType">
+                <option value="dog">Кот</option>
+                <option value="cat">Собака</option>
+                <option value="tiger">Тигр</option>
+            </select>
+        </div>
+        <div class="formItem">
+            <span>
+                Пол вашего питомца
+            </span>
+            <label class="checkGender">
+                <input type="radio" name="gender" value="boy" checked> Мальчик
+                <input type="radio" name="gender" value="girl"> Девочка
+                <input type="radio" name="gender" value="none"> Не решил еще
+            </label>
+        </div>
+        <div class="formItem">
+            <span>
+                Цвет глаз питомца
+            </span>
+            <input type="color" name="eyeColor"/>
+        </div>
+        <div class="formItem">
+            <span>
+                Длина хвоста
+            </span>
+            <input type="number" name="tailLength" value=""/>
+        </div>
+        <div class="formItem"></div>
+        <div class="formItem">
+            <span>
+                Ваше имя
+            </span>
+            <input type="text" name="name" placeholder="Введите имя" required value="">
+        </div>
+        <div class="formItem">
+            <span>
+                Дата вашего рождения
+            </span>
+            <input type="date" name="dateOfBirth" value="" required/>
+        </div>
+        <div class="formItem">
+            <span>
+                Почта
+            </span>
+            <input type="email" name="email" value="" placeholder="example@gmail.com"/>
+        </div>
+        <div class="formItem">
+            <span>
+                Номер телефона
+            </span>
+            <input type="number" name="phone" value="" />
+        </div>
+        <div class="formItem">
+            <span>
+                С правилами ознакомлен
+            </span>
+            <input type="checkbox" name="rules" value="true" required/>
+        </div>
+        <input type="submit" name="submit" value="Отправить">
+        <input type="reset" name="reset" value="Сбросить">
+    </form>
 
 </main>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 body {
     background-color: #F2F2F2;
+    font-family: Arial, sans-serif;
 }
 
 main {
@@ -19,13 +20,54 @@ h1 {
     margin-top: 0;
     font-size: 50px;
     text-align: center;
-    color: rgba(173,38,164,0.67);
+    color: rgba(173, 38, 164, 0.67);
 }
 
 .error {
-    color: rgba(173,30,24,0.88);
+    color: rgba(173, 30, 24, 0.88);
 }
 
 .orders {
     margin: 20px 0;
+}
+
+.formItem {
+    display: grid;
+    grid-template-columns:30% 30%;
+    margin: 10px 0 0 0;
+}
+
+.formItem span {
+    text-align: right;
+    margin: 0 10px 0 0;
+}
+
+.checkGender {
+    display: grid;
+    grid-template-columns: 30px 100%;
+}
+
+input[type="submit"] {
+    margin: 15px 0 0 30%;
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="color"] {
+    box-shadow: none;
+    height: auto;
+}
+
+input[type="color"] {
+    height: 30px;
+    border-radius: 0px;
+    padding: 2px;
+}
+
+input,
+select {
+    border: none;
+    border-radius: 13px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
 }
