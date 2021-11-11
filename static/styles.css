@@ -1,7 +1,3 @@
-body {
-    background-color: #F2F2F2;
-}
-
 main {
     box-sizing: border-box;
     width: 100%;
@@ -28,4 +24,76 @@ h1 {
 
 .orders {
     margin: 20px 0;
+}
+
+.wrapper {
+    margin: auto;
+    width: 500px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    margin-top: 30px;
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+form .gender {
+    display: block;
+    align-items: start;
+}
+
+.genders {
+    display: block;
+}
+
+.genders label, .genders input {
+    margin-bottom: 10px;
+}
+
+.description {
+    width: 200px;
+}
+
+.choose {
+    margin-top: 0;
+}
+
+.rules {
+    align-content: center;
+}
+
+.rules input {
+    margin: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: mediumaquamarine;
+    border: 2px solid yellowgreen;
+}
+
+th {
+    font-weight: bold;
+    color: rgb(65, 12, 12);
+    border: 2px solid yellowgreen;
+    border-radius: 5%;
+    background-color: rgb(96, 163, 226);
+}
+
+tr:nth-child(2n) {
+    background-color: khaki;
+}
+
+td {
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid yellowgreen;
 }

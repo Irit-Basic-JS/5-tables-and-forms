@@ -4,13 +4,89 @@
     <meta charset="UTF-8">
     <title>Форма выбора питомца</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<body>
-<main>
+<body class="bg-info">
+<main class="border border-5">
     <h1>Найди себе друга!</h1>
-
     <!--Форму размещай тут-->
+    <div class="wrapper">
+        <form method="post" action="/pets/orders">
+            <div class="petType">
+                <label for="petType">Выберите животное</label>
+                <br>
+                <select name="petType">
+                    <option value="cat">Кошка</option>
+                    <option value="dog">Собака</option>
+                    <option value="tiger">Тигр</option>
+                </select>
+            </div>
+            
+            <div class="gender">
+                <label for="gender">Выберите пол</label>
+                <div class="choose">
+                    <div class="genders">
+                        <input type="radio" name="gender" value="boy" id="boy"> 
+                        <label for="boy">Самец</label>
+                        <br>
+                        <input type="radio" name="gender" value="girl" id="girl">
+                        <label for="girl">Самка</label>
+                        <br>
+                        <input type="radio" name="gender" value="none" id="none" checked>
+                        <label for="none">Не указано*</label>
+                    </div>
+                    <div class="description text-black-50">*если пол не указан (none), то в дальнейшем он будет выбран случайно</div>
+                </div>
+            </div>
 
+            <div class="eyeColor">
+                <label for="eyeColor">Выберите цвет глаз</label>
+                <br>
+                <input type="color" name="eyeColor" value="#e19a44">
+            </div>
+
+            <div class="tailLength">
+                <label for="tailLength">Введите длину хвоста (в см)</label>
+                <br>
+                <input type="number" name="tailLength" min="7" max="120" value="7">
+            </div>
+    
+            <div class="name">
+                <label for="name">Введите Ваше имя</label>
+                <br>
+                <input type="text" name="name" id="name" placeholder="от 3 до 50 символов" required>
+            </div>
+    
+            <div class="dateOfBirth">
+                <label for="dateOfBirth">Выберите дату рождения</label>
+                <br>
+                <input type="date" name="dateOfBirth">
+            </div>
+
+            <div class="email">
+                <label for="email">Введите Ваш email</label>
+                <br>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="phone">
+                <label for="phone">Введите Ваш номер телефона</label>
+                <br>
+                <input type="tel" name="phone" id="phone" required>
+            </div>
+    
+            <div class="rules">
+                <input type="checkbox" class="form-check-input" name="rules" value="true">
+                <label for="rules">Согласен с условиями <a href="/">политики конфиденциальности</a></label>
+            </div>
+    
+            <div class="buttons">
+                <input type="submit" class="btn btn-success"> 
+                <input type="reset" class="btn btn-warning">
+            </div>
+        </form>
+    </div>
 </main>
+<script src="validation.js"></script>
 </body>
 </html>
