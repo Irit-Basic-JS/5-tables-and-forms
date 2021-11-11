@@ -28,4 +28,14 @@ h1 {
 
 .orders {
     margin: 20px 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border: none;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid blue;
+    padding: 10px;
 }
