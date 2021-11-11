@@ -1,16 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Форма выбора питомца</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="#">
 </head>
+
 <body>
-<main>
-    <h1>Найди себе друга!</h1>
+    <main>
+        <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
+        <div class="container">
+            <form method="POST" action="/pets/orders" class="px-5 py-5">
 
-</main>
+                <h3>Информация о вас</h3>
+                <div>
+                    <label>Ваш email: </label>
+                    <input name="email" placeholder="Введите email" value="vasya@mail.ru">
+                </div>
+
+                <div>
+                    <label>Ваше имя: </label>
+                    <input name="name" placeholder="Введите ваше имя" value="ddd">
+                </div>
+
+                <div>
+                    <label>Введите ваш телефон: </label>
+                    <input name="phone" placeholder="Введите ваш телефон" value="88005553535">
+                </div>
+
+                <h3>Выберите пааметры животного</h3>
+                <div>
+                    <label>Вид</label>
+                    <select name="petType">
+                        <option value="cat">кошка</option>
+                        <option value="dog">собака</option>
+                        <option value="tiger">тигр</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Пол</label>
+                    <select name="gender">
+                        <option value="boy">самец</option>
+                        <option value="girl">самка</option>
+                        <option value="none">другое</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Цвет глаз</label>
+                    <input type="color" name="eyeColor" value="#28c842">
+                </div>
+
+                <div>
+                    <label for="inputDate">Длина хвоста в километрах</label>
+                    <input type="number" name="tailLength" min="7" max="120">
+                </div>
+
+                <div>
+                    <label for="inputDate">Дата рождения:</label>
+                    <input type="date" name="dateOfBirth">
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input type="checkbox" name="rules" value="true">
+                    <label>Принимаю <a href="https://youtu.be/dQw4w9WgXcQ" target = "blank">политику конфиденциальности</a></label>
+                </div>
+
+                <button type = "submit">отправить</button>
+                <button type = "reset">стереть</button>
+            </form>
+        </div>
+
+
+    </main>
 </body>
+
 </html>
