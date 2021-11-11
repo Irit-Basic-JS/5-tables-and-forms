@@ -20,6 +20,7 @@ const pageHead =
 const pageFoot =
 `
 <a href="/">⃪ Вернуться к форме заказа</a>
+<a href="/">Вернуться к форме заказа</a>
 </main>
 </body>
 </html>
@@ -40,6 +41,7 @@ app.use(express.urlencoded({ extended: true }));
 app.post('/pets/orders', (request, response) => {
     const reqBody = request.body;
     const pageBody = constructPageBody(reqBody);
+    console.log(pageBody)
 
     console.log(request.body);
 

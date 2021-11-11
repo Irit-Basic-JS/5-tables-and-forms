@@ -11,6 +11,66 @@
 
     <!--Форму размещай тут-->
 
+    <form action="/pets/orders" method="POST">
+        <fieldset>
+            <legend>Информация о питомце</legend>
+
+            <label for="pet_type">Тип:</label>
+            <select name="petType" id="pet_type">
+                <option value="cat" selected>Кот</option>
+                <option value="dog">Собака</option>
+                <option value="hamster">Хомяк</option>
+                <option value="fish">Рыбки</option>
+            </select>
+            <br>
+            <label>Пол:</label>
+            <label>
+                <input type="radio" name="gender" value="girl">
+                Девочка
+            </label>
+            <label>
+                <input type="radio" name="gender" value="boy">
+                Мальчик
+            </label>
+            <label>
+                <input type="radio" name="gender" value="none" checked>
+                Не определен
+            </label>
+            <br>
+            <label for="eye_color">Цвет глаз:</label>
+            <input type="color" name="eyeColor" id="eye_color">
+            <br>
+            <label for="tail_Length">Длина хвота:</label>
+            <input type="number" name="tailLength" value=""/>
+            <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Информация о вас</legend>
+            <label for="name">Имя:</label>
+            <input type="text" name="name" id="name" placeholder="Введите имя" required value="">
+            <br>
+            <label for="date_of_birth">Дата рождения:</label>
+            <input type="date" name="dateOfBirth" value="" required/>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="example@email.com">
+            <span class="invalid-email"></span>
+            <br>
+            <label for="phone">Телефон:</label>
+            <input type="tel" name="phone" id="phone" placeholder="+7">
+            <span class="invalid-phone"></span>
+            <br>
+            <label for="rules">Даю согласие на обработку персональных данных</label>
+            <input type="checkbox" name="rules" value="true" required>
+        </fieldset>
+
+        <div class="buttons">
+            <input type="submit" name="submit" value="Отправить">
+            <input type="reset" name="reset" value="Сбросить">
+        </div>
+    </form>
 </main>
+<script src="validate.js"></script>
 </body>
 </html>
