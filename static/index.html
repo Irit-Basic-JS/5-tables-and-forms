@@ -9,8 +9,69 @@
 <main>
     <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
-
+    <form action="/pets/orders" method="post" class="form-order" oninput="tailLengthOut.value=tailLength.value">
+        <div class="select-pet-type">
+            <label for="pet-select">Pet type</label>
+            <select id="pet-select" name="petType" required = "required">
+                <option></option>
+                <option>cat</option>
+                <option>dog</option>
+                <option>tiger</option>
+            </select>
+        </div>
+        <br>
+        <div class="select-gender">
+            <label>
+                <input type="radio" name="gender" value="boy" required>
+                Boy
+            </label>
+            <label>
+                <input type="radio" name="gender" value="girl">
+                Girl
+            </label>
+        </div>
+        <br>
+        <div class="select-eye-color">
+            <label for="eye-color">Eye color</label>
+            <input type="color" id="eye-color" name="eyeColor" required>
+        </div>
+        <br>
+        <div class="select-tailLength">
+            <label>Tail length</label>
+            <input type="range" name="tailLength" min="7" max="120" step="1">
+            <output name="tailLengthOut">56</output>
+        </div>
+        <br>
+        <div class="select-name">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name..." minlength="3" maxlength="50">
+        </div>
+        <br>
+        <div class="select-day-of-birth">
+            <label for="select-day">Date of birth</label>
+            <input type="date" id="select-day" name="dateOfBirth" required>
+        </div>
+        <br>
+        <div class="select-email">
+            <label for="in-email">Email</label>
+            <input type="email" id="in-email" name="email" placeholder="box@gmail.com" required>
+        </div>
+        <br>
+        <div class="select-phone">
+            <label for="in-phone">Phone</label>
+            <input type="tel" class="phonee" id="in-phone" name="phone" placeholder="1-(234)-567-89-00" required>
+        </div>
+        <br>
+        <div class="select-rule">
+            <label for="in-rule">Согласен с <a href="#">пользовательским соглашением</a></label>
+            <input type="checkbox" id="in-rule" name="rules" required value="true">
+        </div>
+        <br>
+        <input type="reset">
+        <input type="submit">
+    </form>
+    <script src="validate.js"></script>
+    <script src="submitForm.js"></script>
 </main>
 </body>
 </html>
