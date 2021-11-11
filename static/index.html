@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Форма выбора питомца</title>
     <link rel="stylesheet" href="styles.css">
@@ -8,9 +9,68 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
+    <form method ="post" action="/pets/orders">
+        <fieldset>
+            <legend>Информация о питомце</legend>
+            <label for="petType" id="petType" required>
+                Тип питомца:
+                <select name="petType">
+                    <option value="python">Питон</option>
+                    <option value="boa" selected>Удав</option>
+                    <option value="puma">Пума</option>
+                    <option value="bobcat">Рысь</option>
+                    <option value="dino">Динозавр</option>
+                </select>
+            </label><br>
 
-    <!--Форму размещай тут-->
+            <label name="gender">
+                Пол питомца:
+                <input type="radio" name="gender" value="male" value="boy">Самец
+                <input type="radio" name="gender" value="female" value="girl">Самка
+                <input type="radio" name="gender" value="none" checked> Без разницы
+            </label><br>
 
+            <label>
+                Цвет кожи/шерсти:
+                <input type="color" name="bodyColor">
+            </label><br>
+
+            <label>
+                Размер
+                <input type="range" name="tailLength" value="10" min="0" max="250" required>
+            </label>
+        </fieldset>
+
+        <fieldset class="user_fieldset">
+            <label class="user_label">
+                Как вас зовут?
+                <input type="text" name="name" placeholder="Введите ваше имя">
+            </label>
+
+            <label class="user_label">
+                Дата рождения:
+                <input type="date" name="dateOfBirth" placeholder="Дата рождения">
+            </label>
+
+            <label class="user_label">
+                Email:
+                <input type="email" name="email" placeholder="strong_nuggets@box.master">
+            </label>
+
+            <label class="user_label">
+                Телефон:
+                <input type="phone" name="phone" placeholder="+7 800-555-3535">
+            </label>
+
+            <label>
+                Я согласен с правилами <a href="#">политики конфиденциальности</a>
+                <input type="checkbox" checked name="rules" values="true">
+            </label>
+        </fieldset>
+        <input type="submit" class="submit" value="Отправить">
+        <input type="reset" class="reset" value="Сбросить">
+    </form>
 </main>
+<script src ="validation.js"></script>
 </body>
 </html>
