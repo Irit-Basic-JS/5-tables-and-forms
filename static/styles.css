@@ -3,23 +3,63 @@ body {
 }
 
 main {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 30px;
-    background: white;
-    min-height: calc(100vh - 60px);
-    border-radius: 20px;
+    position:relative;
+	margin:50px auto;   
+	z-index:100;
+	padding:30px;
+	border:1px solid #383838;   
+	background: #D1D1D1;
+	/* My stripped background */
+	background: repeating-linear-gradient(-45deg, #EFC1CB , #EFC1CB 30px, #F2F2F2 30px, #F2F2F2 40px, #C2E8F5 40px, #C2E8F5 70px,#F2F2F2 70px, #F2F2F2 80px);
+	border-radius:8px;
+	box-shadow:0px 1px 6px #3F3F3F;
+    font-size: 20px;
+    font-family: 'Trebuchet MS';
 }
 
+main:after{
+	background:#F9F9F9;
+	margin:10px;
+	position: absolute;
+	content : " ";
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: -1; 
+	border:1px #E5E5E5 solid;       
+	border-radius:8px;
+}
+
+
 h1 {
-    font-family: "Segoe UI Light", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    margin-top: 0;
-    font-size: 50px;
-    text-align: center;
-    color: rgba(173,38,164,0.67);
+	font-family: 'Questrial', Verdana, sans-serif;
+	text-align:center;
+	font-size:40px;
+	padding:0;
+	margin:0 0 20px 0;
+	position:relative;
+	color:#8C8C8C;
+}
+ 
+h1:after {
+	font-size:25px;
+	color:#D6CFCB;
+	text-align:center;
+	display:block;
+	width:100%;
+	font-family: 'Alice', Verdana, serif;
+	text-shadow: 0px 1px 0px #fff;
+}
+ 
+h1:before {
+	position:absolute;
+	bottom:15px;
+	text-align:center;
+	display:block;
+	height:2px;
+	width:100%;
+	background: linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(182,180,180,0.7) 42%,rgba(180,178,178,0) 43%,rgba(168,166,166,0) 50%,rgba(180,178,178,0) 57%,rgba(182,180,180,0.7) 58%,rgba(238,237,237,0.3) 90%,rgba(255,255,255,0) 100%); /* W3C */
 }
 
 .error {
@@ -28,4 +68,43 @@ h1 {
 
 .orders {
     margin: 20px 0;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #8C8C8C;
+}
+
+label {
+    flex-basis: 50px;
+    vertical-align: middle;
+}
+
+legend {
+    font-size: 32px;
+    border: 1px solid #8C8C8C;
+    border-radius: 5px;
+    color: #383838;
+}
+
+input {
+    border: 1px solid #8C8C8C;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}
+
+input[type="color"] {
+    width: 100px;
+    height: 30px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
 }
