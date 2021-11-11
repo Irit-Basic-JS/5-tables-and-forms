@@ -38,8 +38,6 @@ app.use(express.static('static'));
 app.use(express.urlencoded({ extended: true }));
 
 app.post('/pets/orders', (request, response) => {
-    //const reqBody = checkCorrect(request.body);
-   //const reqBody = request.body;
     const pageBody = checkCorrect(request.body);
 
     console.log(request.body);
@@ -48,10 +46,14 @@ app.post('/pets/orders', (request, response) => {
 });
 
 function checkCorrect(body){
-    //if('@' in body['email'])
     if (new Date(body.dateOfBirth) > new Date()){
         return '<p class="error">Вы можете заказать только уже родившегося питомца.</p>';
     }
+
+    if( body.phone.length<11 || body.phone.length>12){
+        return '<p class="error">Введен некорректный телефон</p>';
+    }
+    
     return constructPageBody(body);
 }
 
