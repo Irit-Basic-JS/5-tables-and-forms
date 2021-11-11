@@ -1,15 +1,16 @@
 body {
-    background-color: #F2F2F2;
+    background-color: #4a9159;
 }
 
 main {
+    font-family: "Segoe UI Light", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
     box-sizing: border-box;
     width: 100%;
     max-width: 1000px;
     margin: 30px auto;
     padding: 30px;
     background: white;
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 40px);
     border-radius: 20px;
 }
 
@@ -21,7 +22,25 @@ h1 {
     text-align: center;
     color: rgba(173,38,164,0.67);
 }
+.data {
+    font-size:x-large;
+    border-radius: 50px;    
+}
 
+.submit{
+    font-size:x-large;       
+    width: 170px;
+    position: absolute;
+    top: 94%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+div{
+    font-size:large;
+    margin-top: 0px;
+}
 .error {
     color: rgba(173,30,24,0.88);
 }

@@ -8,9 +8,76 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
+    <form action ='/pets/orders' method='POST'>
+        <fieldset class='data'>
+            <legend>Ваши данные</legend>
+           <label>
+                Имя: </br>
+                <input type="text" placeholder="Введите ваше имя" name='name' value="Based_Name">
+            </label>
+            <label>
+                </br>Дата рождения: </br>
+                <input type="date" name='dateOfBirth' value="1337-04-20">
+            </label>
+            <label>
+                </br>Номер телефона: </br>
+                <input type="tel" placeholder="Введите ваш номер" name='phone' value="88005553535">
+            </label>
+            <label>
+                </br>Почта: </br>
+                <input type="email" placeholder="Введите вашу почту" name='email' value="AVP@gmail.com">
+            </label>
+        </fieldset>
 
-    <!--Форму размещай тут-->
+        <fieldset class='data'>
+            <legend>Данные питомца</legend>
+            <label>
+                Вид: </br>
+                <select name='petType'>
+                    <option value="dog">Собака</option>
+                    <option value="cat">Кот</option>
+                    <option value="toad">Жаба</option>
+                    <option value="frog">Лягушка</option>
+                </select>
+            </label>
+            <label>
+                </br>Пол: </br>
+                <select name="gender">
+                    <option value="boy">Мальчик</option>
+                    <option value="girl">Девочка</option>
+                    <option value="meh">Неважно</option>
+                </select>          
+            </label>
+            <label>
+
+            </label>
+            <label>
+                </br>Цвет глаз: </br>
+                <input type="color" name='eyeColor'>
+            </label>
+            <label>
+                </br>Длина хвоста, км: </br>
+                <input type="number" name='tailLength' min='1' max='100' step="1" value="69">
+            </label>            
+        </fieldset>
+        
+        <div>
+            <label>
+            </br>Я прочитал <a href='https://www.youtube.com/watch?v=BJWhyDeVb3E'>правила</a> и согласен с ними <input type="checkbox" name='rules' value='true'>
+            </label>
+        </div>
+
+        <fieldset class='submit'>
+            <label>
+                <input type="reset" name="Reset" value="Сбросить">
+            </label>
+            <label>
+                <input type="submit" name="Submit" value="Отправить">
+            </label>
+        </fieldset>
+    </form>    
 
 </main>
+<script src="validate.js"></script>
 </body>
 </html>
