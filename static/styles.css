@@ -1,5 +1,5 @@
 body {
-    background-color: #F2F2F2;
+    background-color: #c1dee8;
 }
 
 main {
@@ -8,7 +8,7 @@ main {
     max-width: 1000px;
     margin: 30px auto;
     padding: 30px;
-    background: white;
+    background: #fff2ed;
     min-height: calc(100vh - 60px);
     border-radius: 20px;
 }
@@ -19,7 +19,8 @@ h1 {
     margin-top: 0;
     font-size: 50px;
     text-align: center;
-    color: rgba(173,38,164,0.67);
+    color: #d63900;
+    -webkit-text-stroke: 1px rgb(235, 47, 0);
 }
 
 .error {
@@ -29,3 +30,23 @@ h1 {
 .orders {
     margin: 20px 0;
 }
+
+input[type=text],
+input[type=email],
+input[type=tel]{
+    background-color: #fd9877;
+    color:#130500;
+}
+
+input[type=text]::-webkit-input-placeholder,
+input[type=email]::-webkit-input-placeholder,
+input[type=tel]::-webkit-input-placeholder{
+    color: #fff2ed;
+}
+
+
+.text-center{
+    color: #d63900;
+    -webkit-text-stroke: 1px rgb(235, 47, 0);
+}
+
