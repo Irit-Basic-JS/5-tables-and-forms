@@ -8,9 +8,69 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
+    <form method="post" action="/pets/orders">
+        <fieldset>
+            <legend>Какого питомца вы хотите?</legend>
+            <label for="petType" id="petType" required>
+                <select name="petType">
+                    <option value="default" disabled selected>Выберите питомца</option>
+                    <option value="cat">Кошка</option>
+                    <option value="dog">Собака</option>
+                    <option value="tiger">Тигр</option>
+                </select>
+            </label>
 
-    <!--Форму размещай тут-->
+            <label name="gender">
+                Пол питомца:
+                <input type="radio" name="gender" value="boy">Самец
+                <input type="radio" name="gender" value="girl">Самка
+                <input type="radio" name="gender" value="none" checked> Любой
+            </label>
 
+            <label>
+                Цвет глаз:
+                <input type="color" name="eyeColor">
+            </label>
+
+            <label>
+                Длина хвоста
+                <input type="range" name="tailLength" value="20" min="0" max="100" required>
+            </label>
+
+        </fieldset>
+
+        <fieldset class="user_fieldset">
+            <legend>Немного о вас</legend>
+            <label class="user_label">
+                Фамилия Имя Отчество:
+                <input type="text" name="name" placeholder="Ваши полные ФИО">
+            </label>
+
+            <label class="user_label">
+                Дата рождения:
+                <input type="date" name="dateOfBirth">
+            </label>
+
+            <label class="user_label">
+                Email:
+                <input type="email" id="email" name="email" placeholder="Ваш Email">
+            </label>
+
+            <label class="user_label">
+                Телефон:
+                <input type="phone" id="phone" name="phone" placeholder="Ваш телефон">
+            </label>
+
+            <label>
+                Я ознакомлен(а) с <a href="#">правилами</a> и готов(а) к получению питомца!
+                <input type="checkbox" name="rules" value="true" checked>
+            </label>
+            
+        </fieldset>
+        <input type="submit" class="submit" value="Отправить">
+        <input type="reset" class="reset" value="Сбросить">
+    </form>
 </main>
 </body>
+<script src ="validation.js"></script>
 </html>
