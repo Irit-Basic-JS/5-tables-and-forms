@@ -1,5 +1,5 @@
 body {
-    background-color: #F2F2F2;
+    background-color: #e7e7e7;
 }
 
 main {
@@ -23,9 +23,30 @@ h1 {
 }
 
 .error {
-    color: rgba(173,30,24,0.88);
+    color: rgba(240, 240, 240, 0.88);
 }
 
 .orders {
     margin: 20px 0;
+}
+
+h3 {
+    font-family: "Segoe UI Light", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+    padding: 8px;
+    background: rgb(152, 255, 68);
+    border: 2px solid rgb(255, 15, 255);
+    border-radius: 5%;
+    font-family: sans-serif;
+}
+td {
+    border: 2px solid rgba(173,38,164,0.67);
+    padding: 8px;
+    text-align: center;
+    font-family: sans-serif;
 }
