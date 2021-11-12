@@ -11,6 +11,71 @@
 
     <!--Форму размещай тут-->
 
+    <form method="post" action="/pets/orders">
+        <fieldset>
+            <legend>Какого питомца вы хотите?</legend>
+            <label for="petType" id="petType" required>
+                <select name="petType">
+                    <option value="default" disabled selected>Выберите тип питомца</option>
+                    <option value="cat">Кошка</option>
+                    <option value="dog">Собака</option>
+                    <option value="hamster">Хомяк</option>
+                	<option value="fish">Рыбка</option>
+                </select>
+            </label>
+            <label name="gender">
+            	<select class="form-select mb-3" name="gender" aria-label="Default select example">
+            		<option value="default" disabled selected>Пол питомца</option>
+	                <option value="boy">Самец</option>
+	                <option value="girl">Самка</option>
+	                <option value="none">Любой</option>
+            	</select>
+            </label>
+
+            <label>
+                Цвет глаз:
+                <input type="color" name="eyeColor">
+            </label>
+
+            <label>
+                Длина хвоста (см):
+                <input type="range" name="tailLength" value="20" min="0" max="100" required>
+            </label>
+
+        </fieldset>
+
+        <fieldset class="user_fieldset">
+            <legend>Информация о вас</legend>
+            <label class="user_label">
+                Ваше имя:
+                <input type="text" name="name" id="name" placeholder="Ваши полные ФИО">
+            </label>
+
+            <label class="user_label">
+                Дата рождения:
+                <input type="date" name="dateOfBirth">
+            </label>
+
+            <label class="user_label">
+                Email:
+                <input type="email" id="email" name="email" placeholder="Ваш Email">
+            </label>
+
+            <label class="user_label">
+                Телефон:
+                <input type="phone" id="phone" name="phone" placeholder="Ваш телефон">
+            </label>
+
+            <label>
+                Я ознакомлен(а) и принимаю <a href="#">политику конфиденциальности</a>
+                <input type="checkbox" name="rules" value="true" checked>
+            </label>
+
+        </fieldset>
+        <input type="submit" class="submit" value="Отправить">
+        <input type="reset" class="reset" value="Сбросить">
+    </form>
 </main>
 </body>
+<script src="validation.js"></script>
 </html>
