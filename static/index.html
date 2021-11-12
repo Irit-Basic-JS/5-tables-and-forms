@@ -4,13 +4,79 @@
     <meta charset="UTF-8">
     <title>Форма выбора питомца</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="form-styles.css">
 </head>
 <body>
 <main>
     <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
+    <form action="/pets/orders" method="POST">
+        <fieldset>
+            <legend>Информация о желаемом питомце</legend>
+            <div class="row">
+                <div class="field row">
+                    <label for="petType">Вид</label>
+                    <select id="petType" name="petType">
+                        <option value="dog">Собака</option>
+                        <option value="cat">Кот</option>
+                        <option value="tiger">Тигр</option>
+                    </select>
+                </div>
+                <div class="field row" style="align-self: start">
+                    <label>Пол</label>
+                    <input type="radio" id="boy" name="gender" value="boy">
+                    <label for="boy">Мальчик</label>
+                    <input type="radio" id="girl" name="gender" value="girl">
+                    <label for="girl">Девочка</label>
+                    <input type="radio" id="none" name="gender" value="none" checked>
+                    <label for="none">Не важно</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="field row">
+                    <label for="eyeColor">Цвет глаз</label>
+                    <input type="color" id="eyeColor" name="eyeColor">
+                </div>
+                <div class="field row">
+                    <label for="tailLength">Длина хвоста</label>
+                    <input type="number" id="tailLength" name="tailLength" min="7" max="120" value="7">
+                </div>
+            </div>
+        </fieldset>
 
+        <fieldset>
+            <legend>Информация о себе</legend>
+            <div class="row">
+                <div class="field row">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+                </div>
+                <div class="field row">
+                    <label for="dateOfBirth">Дата рождения</label>
+                    <input type="date" id="dateOfBirth" name="dateOfBirth">
+                </div>
+            </div>
+            <div class="row">
+                <div class="field row">
+                    <label for="email">Эл. почта</label>
+                    <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                </div>
+                <div class="field row">
+                    <label for="phone">Номер телефона</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 XXX XXX-XX-XX">
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="buttons">
+            <input class="btn" type="submit" value="Заказать">
+            <input type="checkbox" id="rules" name="rules" value="true" required>
+            <label for="rules">Я принимаю <a href="#">политику конфиденциальности</a></label>
+            <input class="btn" type="reset" value="Сбросить">
+        </div>
+    </form>
 </main>
+
+<script src="validation.js"></script>
 </body>
 </html>
