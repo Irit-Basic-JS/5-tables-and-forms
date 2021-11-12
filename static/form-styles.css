@@ -1,0 +1,77 @@
+* {
+    color: rgb(173, 38, 164);
+}
+
+form, select, input {
+    font-family: "Segoe UI Light", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+form {
+    font-size: 25px;
+    padding: 10px;
+    background-color: #EEE;
+    text-align: start;
+}
+
+fieldset {
+    margin-bottom: 10px;
+}
+
+a {
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+label[for="rules"] {
+    font-size: smaller;
+}
+
+form, fieldset, .field, .btn {
+    border-radius: 0.3em;
+}
+
+.row {
+    display: flex;
+    margin: 5px;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.field, .btn {
+    padding: 5px;
+    background-color: #FFF;
+}
+
+.field:hover, .btn:hover {
+    background-color: #DDD;
+}
+
+.field:focus-within, .btn:active {
+    background-color: #CCC;
+}
+
+.field.row {
+    gap: 5px;
+}
+
+input, select, option {
+    color: #D659CB;
+}
+
+.buttons input[type="reset"] {
+    float: right;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.btn,
+input[type="radio"]:checked + label {
+    font-weight: bold;
+}
+
+select, input {
+    font-size: 20px;
+}
