@@ -1,5 +1,5 @@
 body {
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
 }
 
 main {
@@ -26,6 +26,20 @@ h1 {
     color: rgba(173,30,24,0.88);
 }
 
-.orders {
-    margin: 20px 0;
+.orders table {
+    width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid #dddddd;
+	border-collapse: collapse; 
+}
+.orders th{
+    font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+.orders td{
+    border: 1px solid #dddddd;
+	padding: 5px;
+    text-align: center;
 }
