@@ -12,11 +12,6 @@
     <h1>Найди себе друга!</h1>
     <div class="container">
         <form method="POST" action="/pets/orders" class="px-5 py-5">
-
-            <!--<input type="" name="name" class="form-control">Имя</input>-->
-            <!--<input type="" name="name" class="form-control">Имя</input>-->
-            <!--<input type="" name="name" class="form-control">Имя</input>-->
-            
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">email</label>
                 <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите email">
@@ -74,8 +69,6 @@
                         <input type="date" name="dateOfBirth" class="form-control">
                     </div>
                 </div>
-                <!--Длина хвоста
-                <input type="number" name="tailLength" class="form-control">-->
             </div>
             <div class="clearfix"></div>
 
@@ -89,30 +82,7 @@
             <button type="reset" class="resetButton">Сбросить</button>
         </form>
     </div>
-
-    <!--
-        Доп. Баллы:
-
-        TODO: Доделать табличку
-        - Добавить стиль
-        - Перевести значения
-        - Цвет глаз в чита
-        - Длина хвоста в единицах измерения
-        - ...
-    -->
-
-<!--   
-petType*
-gender*
-eyeColor*
-tailLength*
-name*
-dateOfBirth*
-email*
-phone*
-rules*
---> 
-
 </main>
+<script src="validation.js"></script>
 </body>
 </html>
