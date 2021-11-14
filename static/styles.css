@@ -29,3 +29,17 @@ h1 {
 .orders {
     margin: 20px 0;
 }
+
+.orders {
+    border: 3px solid black;
+    text-align: center;
+    vertical-align: middle;
+    border-collapse: collapse;
+} 
+
+th {
+    border: 3px solid black;
+ }
+ td {
+    border: 2px solid gray;
+ }

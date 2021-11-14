@@ -38,11 +38,26 @@ app.use(express.static('static'));
 app.use(express.urlencoded({ extended: true }));
 
 app.post('/pets/orders', (request, response) => {
-    const reqBody = request.body;
-    const pageBody = constructPageBody(reqBody);
+    const pageBody = checkCorrect(request.body);
 
     console.log(request.body);
 
     response.send(`${pageHead}${pageBody}${pageFoot}`);
 });
+
+function checkCorrect(body){
+    if (new Date(body.dateOfBirth) > new Date()){
+        return '<p class="error">Вы можете заказать только уже родившегося питомца.</p>';
+    }
+    
+    let reg = /(^(\+7|8)\d{10}$)/;
+    if( !reg.test(body.phone)){
+        return '<p class="error">Введен некорректный телефон</p>';
+    }
+    
+    if(!/@/.test(body.email)){
+        return '<p class="error">Скорее всего почта указана некорректно</p>';
+    }
+    return constructPageBody(body);
+}
 
