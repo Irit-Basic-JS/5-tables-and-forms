@@ -49,11 +49,15 @@ function checkCorrect(body){
     if (new Date(body.dateOfBirth) > new Date()){
         return '<p class="error">Вы можете заказать только уже родившегося питомца.</p>';
     }
-
-    if( body.phone.length<11 || body.phone.length>12){
+    
+    let reg = /(^(\+7|8)\d{10}$)/;
+    if( !reg.test(body.phone)){
         return '<p class="error">Введен некорректный телефон</p>';
     }
     
+    if(!/@/.test(body.email)){
+        return '<p class="error">Скорее всего почта указана некорректно</p>';
+    }
     return constructPageBody(body);
 }
 
