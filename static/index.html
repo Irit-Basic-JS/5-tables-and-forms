@@ -9,7 +9,63 @@
 <main>
     <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
+    <form action="/pets/orders" method="post" >
+        <fieldset>
+            <legend>Информация о питомце</legend>
+            <label>
+                <span class="text">Тип питомца:</span>
+                <select name="petType">
+                    <option value="cat">Кот</option>
+                    <option value="dog">Собака</option>
+                    <option value="hamster">Хомяк</option>
+                    <option value="rabbit-cuckold">Кролик</option>
+                    <option value="parrot">Попугай</option>
+                    <option value="fish">Рыбка</option>
+                </select>
+            </label>
+            <label>
+                <span class="text">Пол: </span>
+                <input type="radio" name="gender" value="boy">Мальчик
+                <input type="radio" name="gender" value="girl">Девочка
+                <input type="radio" name="gender" value="hermafrodite">Гермафродит
+            </label>
+            <label>
+                <span class="text">Цвет глаз:</span>
+                <input type="color" name="eyeColor">
+            </label>
+            <label>
+                <span class="text">Длина хвоста:</span>
+                <input type="number" name="tailLength" value="3" min="2" step="1">
+            </label>
+            <label><span class="text">Желаемые качества характера:<Br>
+                <textarea name="comment" cols="40" rows="3"  placeholder="Бешеный как черт, злобный, похож на крысу с помойки"></textarea></p></label>
+        </fieldset>
+        <fieldset>
+            <legend>Информация о себе</legend>
+            <label>
+                <span class="text">Ваше Имя Отчество:</span>
+                <input type="text" name="name" placeholder="Денис Борисович">
+            </label>
+            <label>
+                <span class="text">Дата рождения:</span>
+                <input type="date" name="dateOfBirth">
+            </label>
+            <label> 
+                <span class="text">Email:</span>
+                <input type="email" name="email" placeholder="eto-realno-email@mail.ru">
+            </label>
+            <label>
+                <span class="text">Телефон:</span>
+                <input type="tel" name="phone" placeholder="8 800 555 35 35" required>
+            </label>
+        </fieldset>
+        <input type="submit" name="submit" value="Отправить" class="buttonw">
+        <input type="reset" name="reset" value="Сбросить" class="buttonw">
+    </form>
+    <script src="validation.js"></script>
+</main>
+</body>
+</html> 
 
 </main>
 </body>
